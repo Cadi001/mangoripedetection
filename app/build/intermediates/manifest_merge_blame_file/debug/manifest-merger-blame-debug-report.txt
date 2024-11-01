@@ -9,27 +9,27 @@
 9        android:targetSdkVersion="34" />
 10
 11    <uses-feature
-11-->C:\Aldwin_Files\Projects\Android\MangoSweetnessDetection\app\src\main\AndroidManifest.xml:5:5-7:36
+11-->C:\Users\Ale\Documents\mangoripedetection\app\src\main\AndroidManifest.xml:5:5-7:36
 12        android:name="android.hardware.camera"
-12-->C:\Aldwin_Files\Projects\Android\MangoSweetnessDetection\app\src\main\AndroidManifest.xml:6:9-47
+12-->C:\Users\Ale\Documents\mangoripedetection\app\src\main\AndroidManifest.xml:6:9-47
 13        android:required="false" />
-13-->C:\Aldwin_Files\Projects\Android\MangoSweetnessDetection\app\src\main\AndroidManifest.xml:7:9-33
+13-->C:\Users\Ale\Documents\mangoripedetection\app\src\main\AndroidManifest.xml:7:9-33
 14
 15    <uses-permission android:name="android.permission.CAMERA" />
-15-->C:\Aldwin_Files\Projects\Android\MangoSweetnessDetection\app\src\main\AndroidManifest.xml:9:5-65
-15-->C:\Aldwin_Files\Projects\Android\MangoSweetnessDetection\app\src\main\AndroidManifest.xml:9:22-62
+15-->C:\Users\Ale\Documents\mangoripedetection\app\src\main\AndroidManifest.xml:9:5-65
+15-->C:\Users\Ale\Documents\mangoripedetection\app\src\main\AndroidManifest.xml:9:22-62
 16    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
-16-->C:\Aldwin_Files\Projects\Android\MangoSweetnessDetection\app\src\main\AndroidManifest.xml:10:5-80
-16-->C:\Aldwin_Files\Projects\Android\MangoSweetnessDetection\app\src\main\AndroidManifest.xml:10:22-77
+16-->C:\Users\Ale\Documents\mangoripedetection\app\src\main\AndroidManifest.xml:10:5-80
+16-->C:\Users\Ale\Documents\mangoripedetection\app\src\main\AndroidManifest.xml:10:22-77
 17    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-17-->C:\Aldwin_Files\Projects\Android\MangoSweetnessDetection\app\src\main\AndroidManifest.xml:11:5-81
-17-->C:\Aldwin_Files\Projects\Android\MangoSweetnessDetection\app\src\main\AndroidManifest.xml:11:22-78
+17-->C:\Users\Ale\Documents\mangoripedetection\app\src\main\AndroidManifest.xml:11:5-81
+17-->C:\Users\Ale\Documents\mangoripedetection\app\src\main\AndroidManifest.xml:11:22-78
 18    <uses-permission android:name="android.permission.INTERNET" /> <!-- Add this line -->
-18-->C:\Aldwin_Files\Projects\Android\MangoSweetnessDetection\app\src\main\AndroidManifest.xml:12:5-67
-18-->C:\Aldwin_Files\Projects\Android\MangoSweetnessDetection\app\src\main\AndroidManifest.xml:12:22-64
+18-->C:\Users\Ale\Documents\mangoripedetection\app\src\main\AndroidManifest.xml:12:5-67
+18-->C:\Users\Ale\Documents\mangoripedetection\app\src\main\AndroidManifest.xml:12:22-64
 19    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-19-->C:\Aldwin_Files\Projects\Android\MangoSweetnessDetection\app\src\main\AndroidManifest.xml:13:5-79
-19-->C:\Aldwin_Files\Projects\Android\MangoSweetnessDetection\app\src\main\AndroidManifest.xml:13:22-76
+19-->C:\Users\Ale\Documents\mangoripedetection\app\src\main\AndroidManifest.xml:13:5-79
+19-->C:\Users\Ale\Documents\mangoripedetection\app\src\main\AndroidManifest.xml:13:22-76
 20    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
 20-->[com.google.android.recaptcha:recaptcha:18.4.0] C:\Users\Ale\.gradle\caches\transforms-3\bace56ff44442557c334a25e9b3fade5\transformed\recaptcha-18.4.0\AndroidManifest.xml:9:5-98
 20-->[com.google.android.recaptcha:recaptcha:18.4.0] C:\Users\Ale\.gradle\caches\transforms-3\bace56ff44442557c334a25e9b3fade5\transformed\recaptcha-18.4.0\AndroidManifest.xml:9:22-95
@@ -46,97 +46,97 @@
 26-->[androidx.core:core:1.9.0] C:\Users\Ale\.gradle\caches\transforms-3\0b09c90d381d570b6539221d53d31bbf\transformed\core-1.9.0\AndroidManifest.xml:26:22-94
 27
 28    <application
-28-->C:\Aldwin_Files\Projects\Android\MangoSweetnessDetection\app\src\main\AndroidManifest.xml:15:5-63:19
+28-->C:\Users\Ale\Documents\mangoripedetection\app\src\main\AndroidManifest.xml:15:5-63:19
 29        android:allowBackup="true"
-29-->C:\Aldwin_Files\Projects\Android\MangoSweetnessDetection\app\src\main\AndroidManifest.xml:16:9-35
+29-->C:\Users\Ale\Documents\mangoripedetection\app\src\main\AndroidManifest.xml:16:9-35
 30        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
 30-->[androidx.core:core:1.9.0] C:\Users\Ale\.gradle\caches\transforms-3\0b09c90d381d570b6539221d53d31bbf\transformed\core-1.9.0\AndroidManifest.xml:28:18-86
 31        android:dataExtractionRules="@xml/data_extraction_rules"
-31-->C:\Aldwin_Files\Projects\Android\MangoSweetnessDetection\app\src\main\AndroidManifest.xml:17:9-65
+31-->C:\Users\Ale\Documents\mangoripedetection\app\src\main\AndroidManifest.xml:17:9-65
 32        android:debuggable="true"
 33        android:extractNativeLibs="false"
 34        android:fullBackupContent="@xml/backup_rules"
-34-->C:\Aldwin_Files\Projects\Android\MangoSweetnessDetection\app\src\main\AndroidManifest.xml:18:9-54
+34-->C:\Users\Ale\Documents\mangoripedetection\app\src\main\AndroidManifest.xml:18:9-54
 35        android:icon="@mipmap/ic_launcher"
-35-->C:\Aldwin_Files\Projects\Android\MangoSweetnessDetection\app\src\main\AndroidManifest.xml:19:9-43
+35-->C:\Users\Ale\Documents\mangoripedetection\app\src\main\AndroidManifest.xml:19:9-43
 36        android:label="@string/app_name"
-36-->C:\Aldwin_Files\Projects\Android\MangoSweetnessDetection\app\src\main\AndroidManifest.xml:20:9-41
+36-->C:\Users\Ale\Documents\mangoripedetection\app\src\main\AndroidManifest.xml:20:9-41
 37        android:roundIcon="@mipmap/ic_launcher_round"
-37-->C:\Aldwin_Files\Projects\Android\MangoSweetnessDetection\app\src\main\AndroidManifest.xml:21:9-54
+37-->C:\Users\Ale\Documents\mangoripedetection\app\src\main\AndroidManifest.xml:21:9-54
 38        android:supportsRtl="true"
-38-->C:\Aldwin_Files\Projects\Android\MangoSweetnessDetection\app\src\main\AndroidManifest.xml:22:9-35
+38-->C:\Users\Ale\Documents\mangoripedetection\app\src\main\AndroidManifest.xml:22:9-35
 39        android:testOnly="true"
 40        android:theme="@style/Theme.MangoSweetnessDetection" >
-40-->C:\Aldwin_Files\Projects\Android\MangoSweetnessDetection\app\src\main\AndroidManifest.xml:23:9-61
+40-->C:\Users\Ale\Documents\mangoripedetection\app\src\main\AndroidManifest.xml:23:9-61
 41        <activity
-41-->C:\Aldwin_Files\Projects\Android\MangoSweetnessDetection\app\src\main\AndroidManifest.xml:25:9-27:40
+41-->C:\Users\Ale\Documents\mangoripedetection\app\src\main\AndroidManifest.xml:25:9-27:40
 42            android:name="com.example.mangosweetnessdetection.OutputActivity"
-42-->C:\Aldwin_Files\Projects\Android\MangoSweetnessDetection\app\src\main\AndroidManifest.xml:26:13-43
+42-->C:\Users\Ale\Documents\mangoripedetection\app\src\main\AndroidManifest.xml:26:13-43
 43            android:exported="false" />
-43-->C:\Aldwin_Files\Projects\Android\MangoSweetnessDetection\app\src\main\AndroidManifest.xml:27:13-37
+43-->C:\Users\Ale\Documents\mangoripedetection\app\src\main\AndroidManifest.xml:27:13-37
 44        <activity
-44-->C:\Aldwin_Files\Projects\Android\MangoSweetnessDetection\app\src\main\AndroidManifest.xml:28:9-30:40
+44-->C:\Users\Ale\Documents\mangoripedetection\app\src\main\AndroidManifest.xml:28:9-30:40
 45            android:name="com.example.mangosweetnessdetection.SetUsername"
-45-->C:\Aldwin_Files\Projects\Android\MangoSweetnessDetection\app\src\main\AndroidManifest.xml:29:13-40
+45-->C:\Users\Ale\Documents\mangoripedetection\app\src\main\AndroidManifest.xml:29:13-40
 46            android:exported="false" />
-46-->C:\Aldwin_Files\Projects\Android\MangoSweetnessDetection\app\src\main\AndroidManifest.xml:30:13-37
+46-->C:\Users\Ale\Documents\mangoripedetection\app\src\main\AndroidManifest.xml:30:13-37
 47        <activity
-47-->C:\Aldwin_Files\Projects\Android\MangoSweetnessDetection\app\src\main\AndroidManifest.xml:31:9-33:40
+47-->C:\Users\Ale\Documents\mangoripedetection\app\src\main\AndroidManifest.xml:31:9-33:40
 48            android:name="com.example.mangosweetnessdetection.RatingsActivity"
-48-->C:\Aldwin_Files\Projects\Android\MangoSweetnessDetection\app\src\main\AndroidManifest.xml:32:13-44
+48-->C:\Users\Ale\Documents\mangoripedetection\app\src\main\AndroidManifest.xml:32:13-44
 49            android:exported="false" />
-49-->C:\Aldwin_Files\Projects\Android\MangoSweetnessDetection\app\src\main\AndroidManifest.xml:33:13-37
+49-->C:\Users\Ale\Documents\mangoripedetection\app\src\main\AndroidManifest.xml:33:13-37
 50        <activity
-50-->C:\Aldwin_Files\Projects\Android\MangoSweetnessDetection\app\src\main\AndroidManifest.xml:34:9-42:20
+50-->C:\Users\Ale\Documents\mangoripedetection\app\src\main\AndroidManifest.xml:34:9-42:20
 51            android:name="com.example.mangosweetnessdetection.InitialScreen"
-51-->C:\Aldwin_Files\Projects\Android\MangoSweetnessDetection\app\src\main\AndroidManifest.xml:35:13-42
+51-->C:\Users\Ale\Documents\mangoripedetection\app\src\main\AndroidManifest.xml:35:13-42
 52            android:exported="true" >
-52-->C:\Aldwin_Files\Projects\Android\MangoSweetnessDetection\app\src\main\AndroidManifest.xml:36:13-36
+52-->C:\Users\Ale\Documents\mangoripedetection\app\src\main\AndroidManifest.xml:36:13-36
 53            <intent-filter>
-53-->C:\Aldwin_Files\Projects\Android\MangoSweetnessDetection\app\src\main\AndroidManifest.xml:37:13-41:29
+53-->C:\Users\Ale\Documents\mangoripedetection\app\src\main\AndroidManifest.xml:37:13-41:29
 54                <action android:name="android.intent.action.MAIN" />
-54-->C:\Aldwin_Files\Projects\Android\MangoSweetnessDetection\app\src\main\AndroidManifest.xml:38:17-69
-54-->C:\Aldwin_Files\Projects\Android\MangoSweetnessDetection\app\src\main\AndroidManifest.xml:38:25-66
+54-->C:\Users\Ale\Documents\mangoripedetection\app\src\main\AndroidManifest.xml:38:17-69
+54-->C:\Users\Ale\Documents\mangoripedetection\app\src\main\AndroidManifest.xml:38:25-66
 55
 56                <category android:name="android.intent.category.LAUNCHER" />
-56-->C:\Aldwin_Files\Projects\Android\MangoSweetnessDetection\app\src\main\AndroidManifest.xml:40:17-77
-56-->C:\Aldwin_Files\Projects\Android\MangoSweetnessDetection\app\src\main\AndroidManifest.xml:40:27-74
+56-->C:\Users\Ale\Documents\mangoripedetection\app\src\main\AndroidManifest.xml:40:17-77
+56-->C:\Users\Ale\Documents\mangoripedetection\app\src\main\AndroidManifest.xml:40:27-74
 57            </intent-filter>
 58        </activity>
 59
 60        <provider
-60-->C:\Aldwin_Files\Projects\Android\MangoSweetnessDetection\app\src\main\AndroidManifest.xml:44:9-52:20
+60-->C:\Users\Ale\Documents\mangoripedetection\app\src\main\AndroidManifest.xml:44:9-52:20
 61            android:name="androidx.core.content.FileProvider"
-61-->C:\Aldwin_Files\Projects\Android\MangoSweetnessDetection\app\src\main\AndroidManifest.xml:45:13-62
+61-->C:\Users\Ale\Documents\mangoripedetection\app\src\main\AndroidManifest.xml:45:13-62
 62            android:authorities="com.yourpackage.fileprovider"
-62-->C:\Aldwin_Files\Projects\Android\MangoSweetnessDetection\app\src\main\AndroidManifest.xml:46:13-63
+62-->C:\Users\Ale\Documents\mangoripedetection\app\src\main\AndroidManifest.xml:46:13-63
 63            android:exported="false"
-63-->C:\Aldwin_Files\Projects\Android\MangoSweetnessDetection\app\src\main\AndroidManifest.xml:47:13-37
+63-->C:\Users\Ale\Documents\mangoripedetection\app\src\main\AndroidManifest.xml:47:13-37
 64            android:grantUriPermissions="true" >
-64-->C:\Aldwin_Files\Projects\Android\MangoSweetnessDetection\app\src\main\AndroidManifest.xml:48:13-47
+64-->C:\Users\Ale\Documents\mangoripedetection\app\src\main\AndroidManifest.xml:48:13-47
 65            <meta-data
-65-->C:\Aldwin_Files\Projects\Android\MangoSweetnessDetection\app\src\main\AndroidManifest.xml:49:13-51:54
+65-->C:\Users\Ale\Documents\mangoripedetection\app\src\main\AndroidManifest.xml:49:13-51:54
 66                android:name="android.support.FILE_PROVIDER_PATHS"
-66-->C:\Aldwin_Files\Projects\Android\MangoSweetnessDetection\app\src\main\AndroidManifest.xml:50:17-67
+66-->C:\Users\Ale\Documents\mangoripedetection\app\src\main\AndroidManifest.xml:50:17-67
 67                android:resource="@xml/file_paths" />
-67-->C:\Aldwin_Files\Projects\Android\MangoSweetnessDetection\app\src\main\AndroidManifest.xml:51:17-51
+67-->C:\Users\Ale\Documents\mangoripedetection\app\src\main\AndroidManifest.xml:51:17-51
 68        </provider>
 69
 70        <activity
-70-->C:\Aldwin_Files\Projects\Android\MangoSweetnessDetection\app\src\main\AndroidManifest.xml:54:9-62:20
+70-->C:\Users\Ale\Documents\mangoripedetection\app\src\main\AndroidManifest.xml:54:9-62:20
 71            android:name="com.example.mangosweetnessdetection.MainActivity"
-71-->C:\Aldwin_Files\Projects\Android\MangoSweetnessDetection\app\src\main\AndroidManifest.xml:55:13-41
+71-->C:\Users\Ale\Documents\mangoripedetection\app\src\main\AndroidManifest.xml:55:13-41
 72            android:exported="true" >
-72-->C:\Aldwin_Files\Projects\Android\MangoSweetnessDetection\app\src\main\AndroidManifest.xml:56:13-36
+72-->C:\Users\Ale\Documents\mangoripedetection\app\src\main\AndroidManifest.xml:56:13-36
 73            <intent-filter>
-73-->C:\Aldwin_Files\Projects\Android\MangoSweetnessDetection\app\src\main\AndroidManifest.xml:37:13-41:29
+73-->C:\Users\Ale\Documents\mangoripedetection\app\src\main\AndroidManifest.xml:37:13-41:29
 74                <action android:name="android.intent.action.MAIN" />
-74-->C:\Aldwin_Files\Projects\Android\MangoSweetnessDetection\app\src\main\AndroidManifest.xml:38:17-69
-74-->C:\Aldwin_Files\Projects\Android\MangoSweetnessDetection\app\src\main\AndroidManifest.xml:38:25-66
+74-->C:\Users\Ale\Documents\mangoripedetection\app\src\main\AndroidManifest.xml:38:17-69
+74-->C:\Users\Ale\Documents\mangoripedetection\app\src\main\AndroidManifest.xml:38:25-66
 75
 76                <category android:name="android.intent.category.LAUNCHER" />
-76-->C:\Aldwin_Files\Projects\Android\MangoSweetnessDetection\app\src\main\AndroidManifest.xml:40:17-77
-76-->C:\Aldwin_Files\Projects\Android\MangoSweetnessDetection\app\src\main\AndroidManifest.xml:40:27-74
+76-->C:\Users\Ale\Documents\mangoripedetection\app\src\main\AndroidManifest.xml:40:17-77
+76-->C:\Users\Ale\Documents\mangoripedetection\app\src\main\AndroidManifest.xml:40:27-74
 77            </intent-filter>
 78        </activity>
 79        <activity

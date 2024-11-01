@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.example.mangosweetnessdetection.app-mergeDebugResources-3:/values-zh-rTW/values-zh-rTW.xml",
+            "outputFile": "com.example.mangosweetnessdetection.app-mergeDebugResources-37:/values-zh-rTW/values-zh-rTW.xml",
             "map": [
                 {
                     "source": "C:\\Users\\Ale\\.gradle\\caches\\transforms-3\\2d0bd1bdc644aa6ccba7def7ccb8c540\\transformed\\play-services-base-18.0.1\\res\\values-zh-rTW\\values.xml",

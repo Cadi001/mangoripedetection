@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "com.example.mangosweetnessdetection.app-mergeDebugResources-3:/values-night-v8/values-night-v8.xml",
+            "outputFile": "com.example.mangosweetnessdetection.app-mergeDebugResources-37:/values-night-v8/values-night-v8.xml",
             "map": [
                 {
-                    "source": "C:\\Aldwin_Files\\Projects\\Android\\MangoSweetnessDetection\\app\\src\\main\\res\\values-night\\themes.xml",
+                    "source": "C:\\Users\\Ale\\Documents\\mangoripedetection\\app\\src\\main\\res\\values-night\\themes.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",

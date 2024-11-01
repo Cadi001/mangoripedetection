@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.example.mangosweetnessdetection.app-mergeDebugResources-3:/values-bs/values-bs.xml",
+            "outputFile": "com.example.mangosweetnessdetection.app-mergeDebugResources-37:/values-bs/values-bs.xml",
             "map": [
                 {
                     "source": "C:\\Users\\Ale\\.gradle\\caches\\transforms-3\\c56e2c6f173f2bc5a9021e7e916fae9b\\transformed\\browser-1.4.0\\res\\values-bs\\values-bs.xml",

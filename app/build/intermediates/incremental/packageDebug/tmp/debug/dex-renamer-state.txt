@@ -1,9 +1,9 @@
-#Fri Nov 01 12:57:26 PST 2024
-base.0=C\:\\Aldwin_Files\\Projects\\Android\\MangoSweetnessDetection\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes.dex
-base.1=C\:\\Aldwin_Files\\Projects\\Android\\MangoSweetnessDetection\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\0\\classes.dex
-base.2=C\:\\Aldwin_Files\\Projects\\Android\\MangoSweetnessDetection\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\9\\classes.dex
-base.3=C\:\\Aldwin_Files\\Projects\\Android\\MangoSweetnessDetection\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes2.dex
-base.4=C\:\\Aldwin_Files\\Projects\\Android\\MangoSweetnessDetection\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes3.dex
+#Fri Nov 01 13:04:24 PST 2024
+base.0=C\:\\Users\\Ale\\Documents\\mangoripedetection\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes.dex
+base.1=C\:\\Users\\Ale\\Documents\\mangoripedetection\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\0\\classes.dex
+base.2=C\:\\Users\\Ale\\Documents\\mangoripedetection\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\9\\classes.dex
+base.3=C\:\\Users\\Ale\\Documents\\mangoripedetection\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes2.dex
+base.4=C\:\\Users\\Ale\\Documents\\mangoripedetection\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes3.dex
 path.0=classes.dex
 path.1=0/classes.dex
 path.2=9/classes.dex
