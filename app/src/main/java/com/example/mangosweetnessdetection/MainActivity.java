@@ -329,7 +329,7 @@ public class MainActivity extends AppCompatActivity {
 //                                outputTxt.setText("Probability: "+confidence +"\nSweet level: Sour, tangy, and slightly astringent with a firm \nTips:\nThese are best for savory dishes like salads, chutneys, or pickles. " +
 //                                        "Avoid eating them raw as they can be very sour and astringent. Add salt or spices to balance the tartness.");
 //                                outputTxt.setVisibility(View.VISIBLE);
-                                outputMessage = "Probability: "+confidence +"\nSweet level: Sour, tangy, and slightly astringent with a firm \nTips:\nThese are best for savory dishes like salads, chutneys, or pickles. " +
+                                outputMessage = "Probability: "+confidence +"\n1. Very Sour \nSweet level: Sour, tangy, and slightly astringent with a firm \nTips:\nThese are best for savory dishes like salads, chutneys, or pickles. " +
                                         "Avoid eating them raw as they can be very sour and astringent. Add salt or spices to balance the tartness.";
 
                             }
@@ -338,7 +338,7 @@ public class MainActivity extends AppCompatActivity {
 //                                outputTxt.setText("Probability: "+confidence +"\nSweet level: Slightly sweet with a mild tartness \nTips:\nPerfect for slicing and adding to fruit salads or eating as a slightly tart snack. " +
 //                                        "If you prefer sweeter mangoes, let them sit at room temperature for a couple more days to ripen further.");
 //                                outputTxt.setVisibility(View.VISIBLE);
-                                outputMessage = "Probability: "+confidence +"\nSweet level: Slightly sweet with a mild tartness \nTips:\nPerfect for slicing and adding to fruit salads or eating as a slightly tart snack. " +
+                                outputMessage = "Probability: "+confidence +"\n2. Sour \nSweet level: Slightly sweet with a mild tartness \nTips:\nPerfect for slicing and adding to fruit salads or eating as a slightly tart snack. " +
                                         "If you prefer sweeter mangoes, let them sit at room temperature for a couple more days to ripen further.";
 
                             }
@@ -347,7 +347,7 @@ public class MainActivity extends AppCompatActivity {
 //                                outputTxt.setText("Probability: "+confidence +"\nSweet level: Balanced between sweet and tart with a juicy \nTips:\nThese are great for smoothies, salsas, or desserts that need a balance of sweet" +
 //                                        " and tangy flavors. Their firmer texture makes them ideal for slicing without becoming too soft.");
 //                                outputTxt.setVisibility(View.VISIBLE);
-                                outputMessage = "Probability: "+confidence +"\nSweet level: Balanced between sweet and tart with a juicy \nTips:\nThese are great for smoothies, salsas, or desserts that need a balance of sweet" +
+                                outputMessage = "Probability: "+confidence +"\n3. Neutral\nSweet level: Balanced between sweet and tart with a juicy \nTips:\nThese are great for smoothies, salsas, or desserts that need a balance of sweet" +
                                         " and tangy flavors. Their firmer texture makes them ideal for slicing without becoming too soft.";
 
                             }
@@ -357,7 +357,7 @@ public class MainActivity extends AppCompatActivity {
 //                                        "ideal for snacking, fruit salads, or as a topping for yogurt and ice cream. Store them in the refrigerator if not consuming immediately to preserve their flavor" +
 //                                        " and texture.");
 //                                outputTxt.setVisibility(View.VISIBLE);
-                                outputMessage = "Probability: "+confidence +"\nSweet level: Sweet, rich, and aromatic with a juicy, soft, and smooth texture \nTips:\nEnjoy these fresh, in desserts, or as a juice. Ripe mangoes are " +
+                                outputMessage = "Probability: "+confidence +"\n4.Sweet \nSweet level: Sweet, rich, and aromatic with a juicy, soft, and smooth texture \nTips:\nEnjoy these fresh, in desserts, or as a juice. Ripe mangoes are " +
                                         "ideal for snacking, fruit salads, or as a topping for yogurt and ice cream. Store them in the refrigerator if not consuming immediately to preserve their flavor" +
                                         " and texture.";
 
@@ -367,8 +367,8 @@ public class MainActivity extends AppCompatActivity {
 //                                outputTxt.setText("Probability: "+confidence +"\nSweet level: Sweet & most likely bitter \nThis mango is OVER RIPE \nTips:\nOverripe mangoes are unsafe to eat if they have a sour or fermented smell, " +
 //                                        "visible mold, dark spots, slimy texture, or an off-taste, as these indicate spoilage and potential harmful bacteria.");
 //                                outputTxt.setVisibility(View.VISIBLE);
-                                outputMessage = "Probability: "+confidence +"\nSweet level: Sweet & most likely bitter \nThis mango is OVER RIPE \nTips:\nOverripe mangoes are unsafe to eat if they have a sour or fermented smell, " +
-                                        "visible mold, dark spots, slimy texture, or an off-taste, as these indicate spoilage and potential harmful bacteria.";
+                                outputMessage = "Probability: "+confidence +"\n5. Very Sweet\nSweet level: Sweet & most likely bitter \nThis mango is OVER RIPE \nTips:\nOverripe mangoes are unsafe to eat if they have a sour or fermented smell, " +
+                                        "visible mold, dark spots, slimy texture, or an off-taste, as these indicate spoilage and potential harmful bacteria. \n\nThis mango is low quality";
 
                             }
                             else if(predictionClass.equals("Over Ripe"))
@@ -376,7 +376,7 @@ public class MainActivity extends AppCompatActivity {
 //                                outputTxt.setText("Probability: "+confidence +"\nSweet level: Very sweet, almost syrupy with an intense mango flavor \nTips:\nUse these in recipes like jams, chutneys, or smoothies where their mushy texture " +
 //                                        "and intense sweetness can be an advantage. However, if they have a fermented smell or mold, discard them as they are no longer safe to eat.");
 //                                outputTxt.setVisibility(View.VISIBLE);
-                                outputMessage = "Probability: "+confidence +"\nSweet level: Very sweet, almost syrupy with an intense mango flavor \nTips:\nUse these in recipes like jams, chutneys, or smoothies where their mushy texture " +
+                                outputMessage = "Probability: "+confidence +"\n6Sweet level: Very sweet, almost syrupy with an intense mango flavor \nTips:\nUse these in recipes like jams, chutneys, or smoothies where their mushy texture " +
                                         "and intense sweetness can be an advantage. However, if they have a fermented smell or mold, discard them as they are no longer safe to eat.";
 
                             }

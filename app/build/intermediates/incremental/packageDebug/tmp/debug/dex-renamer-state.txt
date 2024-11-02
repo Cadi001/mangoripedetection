@@ -1,4 +1,4 @@
-#Fri Nov 01 13:04:24 PST 2024
+#Sat Nov 02 16:20:46 PST 2024
 base.0=C\:\\Users\\Ale\\Documents\\mangoripedetection\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes.dex
 base.1=C\:\\Users\\Ale\\Documents\\mangoripedetection\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\0\\classes.dex
 base.2=C\:\\Users\\Ale\\Documents\\mangoripedetection\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\9\\classes.dex
