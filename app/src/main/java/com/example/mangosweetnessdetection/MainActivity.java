@@ -79,6 +79,11 @@ public class MainActivity extends AppCompatActivity {
     Button gotoRatings;
     FirebaseFirestore db;
     String username;
+
+    // Keys for SharedPreferences
+    private static final String PREFS_NAME = "AppPreferences";
+    private static final String KEY_FIRST_TIME = "isFirstTimeLogin";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -93,15 +98,32 @@ public class MainActivity extends AppCompatActivity {
         gotoRatings = findViewById(R.id.gotoRatings);
         greetings = findViewById(R.id.greetings);
         // Check if the username is already set
-        SharedPreferences prefs = getSharedPreferences("AppPreferences", MODE_PRIVATE);
+        SharedPreferences prefs = getSharedPreferences(PREFS_NAME, MODE_PRIVATE);
         username = prefs.getString("username", null); // Default value is null if not set
         greetings.setText("Howdy, " + username);
 
         detectionCounter = 1;
+
 // Initialize ProgressDialog
         progressDialog = new ProgressDialog(this, R.style.CustomProgressDialog);
         progressDialog.setCancelable(false);
         startTipRotation(); // Start rotating tips when progress dialog is shown
+
+
+        // Delay the function execution by 5 seconds
+        new Handler().postDelayed(() -> {
+            Boolean isFirstTimeLogin = prefs.getBoolean(KEY_FIRST_TIME, true);
+
+            if (isFirstTimeLogin) {
+
+            } else {
+
+            }
+
+            finish();
+        }, 3000); // 5 seconds delay
+
+
 
         gotoRatings.setOnClickListener(v -> {
             startActivity(new Intent(this, RatingsActivity.class));

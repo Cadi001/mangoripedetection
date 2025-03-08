@@ -1963,6 +1963,23 @@
                     }
                 },
                 {
+                    "source": "C:\\projects\\mangoripedetection\\app\\src\\main\\res\\values\\colors.xml",
+                    "from": {
+                        "startLines": "12,13,14,16,15,17,2,4,5,7,8,9,10,6,3",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "424,462,500,582,538,622,57,143,184,270,308,346,384,231,100",
+                        "endColumns": "36,36,36,38,42,36,41,39,45,36,36,36,36,37,41",
+                        "endOffsets": "456,494,532,616,576,654,94,178,225,302,340,378,416,264,137"
+                    },
+                    "to": {
+                        "startLines": "627,628,629,630,631,632,646,714,715,958,959,960,961,970,983",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "31818,31855,31892,31929,31968,32011,33028,37849,37889,56230,56267,56304,56341,56966,57822",
+                        "endColumns": "36,36,36,38,42,36,41,39,45,36,36,36,36,37,41",
+                        "endOffsets": "31850,31887,31924,31963,32006,32043,33065,37884,37930,56262,56299,56336,56373,56999,57859"
+                    }
+                },
+                {
                     "source": "C:\\Users\\Ale\\.gradle\\caches\\transforms-3\\d610b7b459251e6dad17073027935350\\transformed\\coordinatorlayout-1.1.0\\res\\values\\values.xml",
                     "from": {
                         "startLines": "2,3,6,16",
@@ -1979,23 +1996,6 @@
                         "endLines": "109,9214,11172,11256",
                         "endColumns": "60,12,24,24",
                         "endOffsets": "5821,640924,712177,716693"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\Ale\\Documents\\mangoripedetection\\app\\build\\generated\\res\\processDebugGoogleServices\\values\\values.xml",
-                    "from": {
-                        "startLines": "2,3,4,5,6,7",
-                        "startColumns": "4,4,4,4,4,4",
-                        "startOffsets": "55,137,241,350,470,565",
-                        "endColumns": "81,103,108,119,94,71",
-                        "endOffsets": "132,236,345,465,560,632"
-                    },
-                    "to": {
-                        "startLines": "2038,2039,2040,2041,2042,2157",
-                        "startColumns": "4,4,4,4,4,4",
-                        "startOffsets": "137013,137095,137199,137308,137428,154204",
-                        "endColumns": "81,103,108,119,94,71",
-                        "endOffsets": "137090,137194,137303,137423,137518,154271"
                     }
                 },
                 {
@@ -2032,6 +2032,23 @@
                         "endLines": "663,664,665,666,667,668,669,670,2009,2010,2011,2012,2013,2014,2015,2016,2018,2019,2020,2021,2022,2023,2024,2025,2026,11804,12801",
                         "endColumns": "89,79,89,89,79,80,79,79,104,180,124,106,179,122,115,102,187,104,180,124,174,147,62,61,78,20,20",
                         "endOffsets": "34294,34374,34464,34554,34634,34715,34795,34875,133869,134050,134175,134282,134462,134585,134701,134804,135159,135264,135445,135570,135745,135893,135956,136018,136097,736768,773275"
+                    }
+                },
+                {
+                    "source": "C:\\projects\\mangoripedetection\\app\\src\\main\\res\\values\\ic_launcher_background.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "57",
+                        "endColumns": "56",
+                        "endOffsets": "109"
+                    },
+                    "to": {
+                        "startLines": "718",
+                        "startColumns": "4",
+                        "startOffsets": "38070",
+                        "endColumns": "56",
+                        "endOffsets": "38122"
                     }
                 },
                 {
@@ -2092,6 +2109,25 @@
                     }
                 },
                 {
+                    "source": "C:\\projects\\mangoripedetection\\app\\src\\main\\res\\values\\themes.xml",
+                    "from": {
+                        "startLines": "2,9,7",
+                        "startColumns": "4,4,4",
+                        "startOffsets": "102,443,345",
+                        "endLines": "5,14,7",
+                        "endColumns": "12,12,94",
+                        "endOffsets": "337,736,435"
+                    },
+                    "to": {
+                        "startLines": "2517,5576,6441",
+                        "startColumns": "4,4,4",
+                        "startOffsets": "177577,392808,451246",
+                        "endLines": "2520,5581,6441",
+                        "endColumns": "12,12,93",
+                        "endOffsets": "177703,393032,451335"
+                    }
+                },
+                {
                     "source": "C:\\Users\\Ale\\.gradle\\caches\\transforms-3\\16cc6f2eda50c064866141bffaae4da2\\transformed\\savedstate-1.2.1\\res\\values\\values.xml",
                     "from": {
                         "startLines": "2",
@@ -2109,40 +2145,6 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\Ale\\Documents\\mangoripedetection\\app\\src\\main\\res\\values\\strings.xml",
-                    "from": {
-                        "startLines": "1",
-                        "startColumns": "4",
-                        "startOffsets": "16",
-                        "endColumns": "47",
-                        "endOffsets": "59"
-                    },
-                    "to": {
-                        "startLines": "1997",
-                        "startColumns": "4",
-                        "startOffsets": "132105",
-                        "endColumns": "47",
-                        "endOffsets": "132148"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\Ale\\Documents\\mangoripedetection\\app\\src\\main\\res\\values\\colors.xml",
-                    "from": {
-                        "startLines": "12,13,14,16,15,17,2,4,5,7,8,9,10,6,3",
-                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "412,449,486,566,523,605,55,139,179,263,300,337,374,225,97",
-                        "endColumns": "36,36,36,38,42,36,41,39,45,36,36,36,36,37,41",
-                        "endOffsets": "444,481,518,600,561,637,92,174,220,295,332,369,406,258,134"
-                    },
-                    "to": {
-                        "startLines": "627,628,629,630,631,632,646,714,715,958,959,960,961,970,983",
-                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "31818,31855,31892,31929,31968,32011,33028,37849,37889,56230,56267,56304,56341,56966,57822",
-                        "endColumns": "36,36,36,38,42,36,41,39,45,36,36,36,36,37,41",
-                        "endOffsets": "31850,31887,31924,31963,32006,32043,33065,37884,37930,56262,56299,56336,56373,56999,57859"
-                    }
-                },
-                {
                     "source": "C:\\Users\\Ale\\.gradle\\caches\\transforms-3\\cf53a70cd92396473a89a1cdac83547f\\transformed\\activity-1.8.0\\res\\values\\values.xml",
                     "from": {
                         "startLines": "2,3",
@@ -2157,6 +2159,23 @@
                         "startOffsets": "122788,124858",
                         "endColumns": "41,59",
                         "endOffsets": "122825,124913"
+                    }
+                },
+                {
+                    "source": "C:\\projects\\mangoripedetection\\app\\src\\main\\res\\values\\strings.xml",
+                    "from": {
+                        "startLines": "1",
+                        "startColumns": "4",
+                        "startOffsets": "17",
+                        "endColumns": "47",
+                        "endOffsets": "60"
+                    },
+                    "to": {
+                        "startLines": "1997",
+                        "startColumns": "4",
+                        "startOffsets": "132105",
+                        "endColumns": "47",
+                        "endOffsets": "132148"
                     }
                 },
                 {
@@ -2198,23 +2217,6 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\Ale\\Documents\\mangoripedetection\\app\\src\\main\\res\\values\\ic_launcher_background.xml",
-                    "from": {
-                        "startLines": "2",
-                        "startColumns": "4",
-                        "startOffsets": "57",
-                        "endColumns": "56",
-                        "endOffsets": "109"
-                    },
-                    "to": {
-                        "startLines": "718",
-                        "startColumns": "4",
-                        "startOffsets": "38070",
-                        "endColumns": "56",
-                        "endOffsets": "38122"
-                    }
-                },
-                {
                     "source": "C:\\Users\\Ale\\.gradle\\caches\\transforms-3\\c56e2c6f173f2bc5a9021e7e916fae9b\\transformed\\browser-1.4.0\\res\\values\\values.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11",
@@ -2229,25 +2231,6 @@
                         "startOffsets": "33596,33654,33720,33783,63378,63449,136102,136798,136865,136944",
                         "endColumns": "57,65,62,61,70,71,67,66,78,68",
                         "endOffsets": "33649,33715,33778,33840,63444,63516,136165,136860,136939,137008"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\Ale\\Documents\\mangoripedetection\\app\\src\\main\\res\\values\\themes.xml",
-                    "from": {
-                        "startLines": "2,9,7",
-                        "startColumns": "4,4,4",
-                        "startOffsets": "100,434,338",
-                        "endLines": "5,14,7",
-                        "endColumns": "12,12,94",
-                        "endOffsets": "332,722,428"
-                    },
-                    "to": {
-                        "startLines": "2517,5576,6441",
-                        "startColumns": "4,4,4",
-                        "startOffsets": "177577,392808,451246",
-                        "endLines": "2520,5581,6441",
-                        "endColumns": "12,12,93",
-                        "endOffsets": "177703,393032,451335"
                     }
                 },
                 {
@@ -2267,6 +2250,23 @@
                         "endLines": "1823,1856,1893,11439,11443",
                         "endColumns": "56,64,63,24,24",
                         "endOffsets": "121472,123167,125081,723270,723419"
+                    }
+                },
+                {
+                    "source": "C:\\projects\\mangoripedetection\\app\\build\\generated\\res\\processDebugGoogleServices\\values\\values.xml",
+                    "from": {
+                        "startLines": "2,3,4,5,6,7",
+                        "startColumns": "4,4,4,4,4,4",
+                        "startOffsets": "55,137,241,350,470,565",
+                        "endColumns": "81,103,108,119,94,71",
+                        "endOffsets": "132,236,345,465,560,632"
+                    },
+                    "to": {
+                        "startLines": "2038,2039,2040,2041,2042,2157",
+                        "startColumns": "4,4,4,4,4,4",
+                        "startOffsets": "137013,137095,137199,137308,137428,154204",
+                        "endColumns": "81,103,108,119,94,71",
+                        "endOffsets": "137090,137194,137303,137423,137518,154271"
                     }
                 },
                 {
@@ -3649,14 +3649,14 @@
             "outputFile": "com.example.mangosweetnessdetection.app-merged_res-39:/values-night-v8_values-night-v8.arsc.flat",
             "map": [
                 {
-                    "source": "C:\\Users\\Ale\\Documents\\mangoripedetection\\app\\src\\main\\res\\values-night\\themes.xml",
+                    "source": "C:\\projects\\mangoripedetection\\app\\src\\main\\res\\values-night\\themes.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
-                        "startOffsets": "100",
+                        "startOffsets": "102",
                         "endLines": "5",
                         "endColumns": "12",
-                        "endOffsets": "330"
+                        "endOffsets": "335"
                     },
                     "to": {
                         "startLines": "2",

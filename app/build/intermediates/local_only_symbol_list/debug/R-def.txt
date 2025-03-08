@@ -53,12 +53,14 @@ id recyclerViewRatings
 id scanAnotherMangoButton
 id setUsernameButton
 id showRatingsDialogButton
+id skipButton
 id submitRatingButton
 id textView
 id textView2
 id textView3
 id textView4
 id textView5
+id textView6
 id usernameText
 id usernameTextView
 layout activity_initial_screen

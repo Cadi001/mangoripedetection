@@ -3569,6 +3569,7 @@ id showHome
 id showRatingsDialogButton
 id showTitle
 id sin
+id skipButton
 id skipCollapsed
 id skipped
 id slide
@@ -3627,6 +3628,7 @@ id textView2
 id textView3
 id textView4
 id textView5
+id textView6
 id text_input_end_icon
 id text_input_error_icon
 id text_input_start_icon
