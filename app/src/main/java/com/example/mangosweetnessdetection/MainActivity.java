@@ -7,16 +7,20 @@ import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.graphics.Color;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.Handler;
 import android.provider.MediaStore;
 import android.util.Base64;
 import android.util.Log;
+import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.FrameLayout;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.RatingBar;
 import android.widget.TextView;
@@ -62,6 +66,7 @@ public class MainActivity extends AppCompatActivity {
     private String base64Image;
     private Uri photoUri;
     private TextView outputTxt;
+    private TextView tut_initial, tut_1, tut_2, tut_3, tut_4, tut_5, tut_6;
     private String currentPhotoPath;
     int detectionCounter;
     private final String[] mangoTips = {
@@ -76,13 +81,15 @@ public class MainActivity extends AppCompatActivity {
 
     private ProgressDialog progressDialog;
     TextView greetings;
-    Button gotoRatings;
+    Button gotoRatings, skipGuideButton, previousGuideButton, nextGuideButton;
     FirebaseFirestore db;
     String username;
+    View dimLayout;
+    View focusedButton;
+    ImageButton toggleGuideButton;
+    TextView guideCounter;
 
-    // Keys for SharedPreferences
-    private static final String PREFS_NAME = "AppPreferences";
-    private static final String KEY_FIRST_TIME = "isFirstTimeLogin";
+    int tutorialStep = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -97,33 +104,84 @@ public class MainActivity extends AppCompatActivity {
         db = FirebaseFirestore.getInstance();
         gotoRatings = findViewById(R.id.gotoRatings);
         greetings = findViewById(R.id.greetings);
+        toggleGuideButton = findViewById(R.id.toggleGuideButton);
+        skipGuideButton = findViewById(R.id.skipGuideButton);
+        previousGuideButton = findViewById(R.id.prevGuideButton);
+        nextGuideButton = findViewById(R.id.nextGuideButton);
+        guideCounter = findViewById(R.id.tut_count);
+
+        tut_initial = findViewById(R.id.tut_welcome_message);
+        tut_1 = findViewById(R.id.tut_1);
+        tut_2 = findViewById(R.id.tut_2);
+        tut_3 = findViewById(R.id.tut_3);
+        tut_4 = findViewById(R.id.tut_4);
+        tut_5 = findViewById(R.id.tut_5);
+        tut_6 = findViewById(R.id.tut_6);
+
+
+
         // Check if the username is already set
-        SharedPreferences prefs = getSharedPreferences(PREFS_NAME, MODE_PRIVATE);
+        SharedPreferences prefs = getSharedPreferences("AppPreferences", MODE_PRIVATE);
         username = prefs.getString("username", null); // Default value is null if not set
         greetings.setText("Howdy, " + username);
+        //TOGGLE GUIDE
+        skipGuideButton.setOnClickListener(v -> {
+            tutorialStep += 100;
+            tut_initial.setVisibility(View.VISIBLE);
+            tut_1.setVisibility(View.GONE);
+            tut_2.setVisibility(View.GONE);
+            tut_3.setVisibility(View.GONE);
+            tut_4.setVisibility(View.GONE);
+            tut_5.setVisibility(View.GONE);
+            tut_6.setVisibility(View.GONE);
+            guideCounter.setText(tutorialStep + " of 5");
+            updateTutorialStep();
+            skipGuideButton.setText("Skip");
+            FrameLayout.LayoutParams params = (FrameLayout.LayoutParams) skipGuideButton.getLayoutParams();
+            params.gravity = Gravity.TOP | Gravity.LEFT;
+            params.setMargins(20, 5,0,0);
+            skipGuideButton.setLayoutParams(params);
+        });
 
+        previousGuideButton.setOnClickListener(v -> {
+            tutorialStep--;
+            guideCounter.setText(tutorialStep + " of 5");
+            updateTutorialStep();
+        });
+
+        nextGuideButton.setOnClickListener(v -> {
+            tutorialStep++;
+            guideCounter.setText(tutorialStep + " of 5");
+            updateTutorialStep();
+        });
         detectionCounter = 1;
 
 // Initialize ProgressDialog
         progressDialog = new ProgressDialog(this, R.style.CustomProgressDialog);
         progressDialog.setCancelable(false);
         startTipRotation(); // Start rotating tips when progress dialog is shown
+        dimLayout = findViewById(R.id.dim_layout);
 
+//        // Delay the function execution by 5 seconds
+//        new Handler().postDelayed(() -> {
+//            Boolean isFirstTimeLogin = prefs.getBoolean("isFirstTimeLogin", true);
+//
+//            if (isFirstTimeLogin) {
+//
+//            } else {
+//
+//            }
+//
+//            finish();
+//        }, 3000); // 5 seconds delay
 
-        // Delay the function execution by 5 seconds
-        new Handler().postDelayed(() -> {
-            Boolean isFirstTimeLogin = prefs.getBoolean(KEY_FIRST_TIME, true);
+        toggleGuideButton.setOnClickListener(v -> {
+            tutorialStep = 0;
+            tut_initial.setVisibility(View.VISIBLE);
+            guideCounter.setText(tutorialStep + " of 5");
+            HighlightWidgets.highlightView(dimLayout);
 
-            if (isFirstTimeLogin) {
-
-            } else {
-
-            }
-
-            finish();
-        }, 3000); // 5 seconds delay
-
-
+        });
 
         gotoRatings.setOnClickListener(v -> {
             startActivity(new Intent(this, RatingsActivity.class));
@@ -159,67 +217,132 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
-//    private void showRateDialog() {
-//        // Create an AlertDialog
-//        androidx.appcompat.app.AlertDialog.Builder builder = new androidx.appcompat.app.AlertDialog.Builder(this);
-//        LayoutInflater inflater = this.getLayoutInflater();
-//        View dialogView = inflater.inflate(R.layout.dialog_rate_app, null);
-//        builder.setView(dialogView);
-//
-//        // Find RatingBar, EditText, and Button
-//        RatingBar ratingBar = dialogView.findViewById(R.id.ratingBar);
-//        EditText feedbackEditText = dialogView.findViewById(R.id.feedbackEditText);
-//        Button submitButton = dialogView.findViewById(R.id.submitRatingButton);
-//
-//        // Create the dialog
-//        final androidx.appcompat.app.AlertDialog dialog = builder.create();
-//
-//        // Set submit button click listener
-//        submitButton.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                // Get rating and feedback
-//                float rating = ratingBar.getRating();
-//                String feedback = feedbackEditText.getText().toString();
-//
-//                if (feedback.isEmpty()) {
-//                    feedbackEditText.setError("Please enter feedback");
-//                    return;
-//                }
-//
-//                // Save the rating and feedback to Firestore
-//                saveFeedbackToFirestore(rating, feedback, username);
-//
-//                // Show a confirmation message
-//                Toast.makeText(MainActivity.this, "Thanks for your feedback!", Toast.LENGTH_SHORT).show();
-//
-//                // Dismiss the dialog
-//                dialog.dismiss();
-//            }
-//        });
-//
-//        // Show the dialog
-//        dialog.show();
-//    }
-//
-//    private void saveFeedbackToFirestore(float rating, String feedback, String username) {
-//        // Create a map to store the rating, feedback, and username
-//        Map<String, Object> feedbackData = new HashMap<>();
-//        feedbackData.put("rating", rating);
-//        feedbackData.put("feedback", feedback);
-//        feedbackData.put("username", username); // Add username to the data
-//        feedbackData.put("timestamp", System.currentTimeMillis());  // Optional: Add timestamp
-//
-//        // Add data to Firestore
-//        db.collection("feedbacks")
-//                .add(feedbackData)
-//                .addOnSuccessListener(documentReference -> {
-//                    Toast.makeText(MainActivity.this, "Feedback saved!", Toast.LENGTH_SHORT).show();
-//                })
-//                .addOnFailureListener(e -> {
-//                    Toast.makeText(MainActivity.this, "Failed to save feedback: " + e.getMessage(), Toast.LENGTH_SHORT).show();
-//                });
-//    }
+    private void updateTutorialStep(){
+        if(tutorialStep == 0){
+            dimLayout.setVisibility(View.VISIBLE); // Show the dim effect
+            tut_initial.setVisibility(View.VISIBLE);
+        }
+        else if(tutorialStep == 1){
+            dimLayout.setVisibility(View.VISIBLE); // Show the dim effect
+
+            buttonSelectFromGallery.bringToFront();
+            focusedButton = imageView;
+            buttonSelectFromGallery.setEnabled(false);
+            buttonTakePhoto.setEnabled(false);
+            buttonDetect.setEnabled(false);
+            gotoRatings.setEnabled(false);
+            tut_initial.setVisibility(View.GONE);
+            tut_1.setVisibility(View.VISIBLE);
+            tut_2.setVisibility(View.GONE);
+            tut_3.setVisibility(View.GONE);
+            tut_4.setVisibility(View.GONE);
+            tut_5.setVisibility(View.GONE);
+            tut_6.setVisibility(View.GONE);
+
+
+        } else if (tutorialStep == 2) {
+            dimLayout.setVisibility(View.VISIBLE); // Show the dim effect
+
+            buttonTakePhoto.bringToFront();
+            focusedButton = buttonSelectFromGallery;
+            buttonSelectFromGallery.setEnabled(true);
+            buttonTakePhoto.setEnabled(false);
+            buttonDetect.setEnabled(false);
+            gotoRatings.setEnabled(false);
+            tut_initial.setVisibility(View.GONE);
+            tut_1.setVisibility(View.GONE);
+            tut_2.setVisibility(View.VISIBLE);
+            tut_3.setVisibility(View.GONE);
+            tut_4.setVisibility(View.GONE);
+            tut_5.setVisibility(View.GONE);
+            tut_6.setVisibility(View.GONE);
+
+
+        }else if (tutorialStep == 3) {
+            dimLayout.setVisibility(View.VISIBLE); // Show the dim effect
+
+            imageView.bringToFront();
+            focusedButton = buttonTakePhoto;
+            buttonSelectFromGallery.setEnabled(false);
+            buttonTakePhoto.setEnabled(true);
+            buttonDetect.setEnabled(false);
+            gotoRatings.setEnabled(false);
+            tut_initial.setVisibility(View.GONE);
+            tut_1.setVisibility(View.GONE);
+            tut_2.setVisibility(View.GONE);
+            tut_3.setVisibility(View.VISIBLE);
+            tut_4.setVisibility(View.GONE);
+            tut_5.setVisibility(View.GONE);
+            tut_6.setVisibility(View.GONE);
+
+
+        }else if (tutorialStep == 4) {
+            dimLayout.setVisibility(View.VISIBLE); // Show the dim effect
+
+            buttonDetect.bringToFront();
+            focusedButton = buttonDetect;
+            buttonSelectFromGallery.setEnabled(false);
+            buttonTakePhoto.setEnabled(false);
+            buttonDetect.setEnabled(true);
+            gotoRatings.setEnabled(false);
+            tut_initial.setVisibility(View.GONE);
+            tut_1.setVisibility(View.GONE);
+            tut_2.setVisibility(View.GONE);
+            tut_3.setVisibility(View.GONE);
+            tut_4.setVisibility(View.VISIBLE);
+            tut_5.setVisibility(View.GONE);
+            tut_6.setVisibility(View.GONE);
+
+
+        }else if (tutorialStep == 5) {
+            dimLayout.setVisibility(View.VISIBLE); // Show the dim effect
+
+            outputTxt.bringToFront();
+            outputTxt.setVisibility(View.VISIBLE);
+
+            tut_1.setVisibility(View.GONE);
+            tut_2.setVisibility(View.GONE);
+            tut_3.setVisibility(View.GONE);
+            tut_4.setVisibility(View.GONE);
+            tut_5.setVisibility(View.VISIBLE);
+            tut_6.setVisibility(View.GONE);
+
+
+        }else if (tutorialStep == 6) {
+            dimLayout.setVisibility(View.VISIBLE); // Show the dim effect
+
+            gotoRatings.bringToFront();
+
+            tut_initial.setVisibility(View.GONE);
+            tut_1.setVisibility(View.GONE);
+            tut_2.setVisibility(View.GONE);
+            tut_3.setVisibility(View.GONE);
+            tut_4.setVisibility(View.GONE);
+            tut_5.setVisibility(View.GONE);
+            tut_6.setVisibility(View.VISIBLE);
+
+            skipGuideButton.setText("Finish");
+            FrameLayout.LayoutParams params = (FrameLayout.LayoutParams) skipGuideButton.getLayoutParams();
+            params.gravity = Gravity.TOP | Gravity.CENTER_HORIZONTAL;
+            params.setMargins(0, 5,0,0);
+            skipGuideButton.setLayoutParams(params);
+
+        }else{
+            buttonSelectFromGallery.setEnabled(true);
+            buttonTakePhoto.setEnabled(true);
+            buttonDetect.setEnabled(true);
+            gotoRatings.setEnabled(true);
+            tut_1.setVisibility(View.GONE);
+            tut_2.setVisibility(View.GONE);
+            tut_3.setVisibility(View.GONE);
+            tut_4.setVisibility(View.GONE);
+            tut_5.setVisibility(View.GONE);
+            tut_6.setVisibility(View.GONE);
+
+            outputTxt.setVisibility(View.INVISIBLE);
+            dimLayout.setVisibility(View.GONE);
+        }
+    }
 
     private void startTipRotation() {
         handler.postDelayed(new Runnable() {

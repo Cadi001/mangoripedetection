@@ -38,6 +38,6 @@ public class InitialScreen extends AppCompatActivity {
             }
 
             finish();
-        }, 3000); // 5 seconds delay
+        }, 10); // 5 seconds delay
     }
 }

@@ -1,13 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/a4">
 
-    <!-- Button for selecting an image from the gallery -->
-
-    <!-- Button for taking a photo with the camera -->
 
     <TextView
         android:id="@+id/textView3"
@@ -114,5 +112,141 @@
         android:layout_marginTop="23dp"
         android:textColor="@color/a2"
         android:textSize="16sp" />
+
+    <ImageButton
+        android:id="@+id/toggleGuideButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/buttonDetect"
+        android:layout_alignEnd="@+id/outputTxt"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="-10dp"
+        android:layout_marginEnd="0dp"
+        android:layout_toEndOf="@+id/buttonDetect"
+        android:background="@color/transparent"
+        app:srcCompat="@drawable/guide" />
+    <FrameLayout
+        android:id="@+id/dim_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#80000000"
+        android:visibility="visible"
+        tools:visibility="gone">
+
+        <TextView
+            android:id="@+id/tut_welcome_message"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text='Hello, welcome to the tutorial on how to use the Mango Meter app\n
+                        press "next" to proceed'
+            android:textColor="@color/a3_light"
+            android:layout_marginHorizontal="50dp"
+
+
+            />
+
+        <TextView
+            android:id="@+id/tut_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top|center"
+            android:layout_marginTop="50dp"
+            android:text='You can select mango from gallery \n by tapping the "Select from Gallery Button"'
+            android:textColor="@color/a3_light"
+            android:layout_marginHorizontal="50dp"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/tut_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top|center"
+            android:layout_marginTop="50dp"
+            android:text='or You can use your camera to capture an image of a mango by tapping "Take Photo"'
+            android:textColor="@color/a3_light"
+            android:layout_marginHorizontal="50dp"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/tut_3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top|center"
+            android:layout_marginTop="50dp"
+            android:text='Once you select a photo from either Galery or Camera you will see the uploaded image here'
+            android:textColor="@color/a3_light"
+            android:layout_marginHorizontal="50dp"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/tut_4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top|center"
+            android:layout_marginTop="50dp"
+            android:text='Then press "Detect Ripeness button to start the scanning of mango'
+            android:textColor="@color/a3_light"
+            android:layout_marginHorizontal="50dp"
+            android:visibility="gone" />
+        <TextView
+            android:id="@+id/tut_5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top|center"
+            android:layout_marginTop="50dp"
+            android:text='Then you will see the scan resuts here'
+            android:textColor="@color/a3_light"
+            android:layout_marginHorizontal="50dp"
+            android:visibility="gone" />
+        <TextView
+            android:id="@+id/tut_6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top|center"
+            android:layout_marginTop="50dp"
+            android:text='You can see other users review here \n You can also leave a review after 5 concutive use of the our Detector'
+            android:textColor="@color/a3_light"
+            android:layout_marginHorizontal="50dp"
+            android:visibility="gone" />
+
+        <Button
+            android:id="@+id/skipGuideButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left|top"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="5dp"
+            android:text="Skip" />
+
+        <Button
+            android:id="@+id/nextGuideButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right|bottom"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="20dp"
+            android:text="Next" />
+
+        <TextView
+            android:id="@+id/tut_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|center"
+            android:layout_marginTop="50dp"
+            android:layout_marginBottom="35dp"
+            android:text='1 of 5'
+            android:textColor="@color/a3_light" />
+
+        <Button
+            android:id="@+id/prevGuideButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left|bottom"
+            android:layout_marginLeft="20dp"
+            android:layout_marginBottom="20dp"
+            android:text="Previous" />
+    </FrameLayout>
+
 
 </RelativeLayout>

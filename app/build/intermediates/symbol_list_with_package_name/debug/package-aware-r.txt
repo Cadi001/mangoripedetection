@@ -1333,6 +1333,7 @@ color a1
 color a2
 color a3
 color a3_1
+color a3_dim
 color a3_light
 color a4
 color abc_background_cache_hint_selector_material_dark
@@ -2101,6 +2102,7 @@ color mtrl_textinput_hovered_box_stroke_color
 color notification_action_color_filter
 color notification_icon_bg_color
 color p1
+color p1_dim
 color p2
 color p3
 color p4
@@ -2127,6 +2129,7 @@ color switch_thumb_normal_material_dark
 color switch_thumb_normal_material_light
 color tooltip_background_dark
 color tooltip_background_light
+color transparent
 color white
 dimen abc_action_bar_content_inset_material
 dimen abc_action_bar_content_inset_with_nav
@@ -3048,6 +3051,7 @@ drawable design_snackbar_background
 drawable gallery_icon
 drawable googleg_disabled_color_18
 drawable googleg_standard_color_18
+drawable guide
 drawable ic_arrow_back_black_24
 drawable ic_clear_black_24
 drawable ic_clock_black_24dp
@@ -3305,6 +3309,7 @@ id design_menu_item_text
 id design_navigation_view
 id dialog_button
 id dialog_title
+id dim_layout
 id dimensions
 id direct
 id disableHome
@@ -3475,6 +3480,7 @@ id navigation_header_container
 id never
 id neverCompleteToEnd
 id neverCompleteToStart
+id nextGuideButton
 id noScroll
 id noState
 id none
@@ -3521,6 +3527,7 @@ id pin
 id position
 id postLayout
 id pressed
+id prevGuideButton
 id progress_circular
 id progress_horizontal
 id radio
@@ -3571,6 +3578,7 @@ id showTitle
 id sin
 id skipButton
 id skipCollapsed
+id skipGuideButton
 id skipped
 id slide
 id snackbar_action
@@ -3643,6 +3651,7 @@ id title
 id titleDividerNoCustom
 id title_template
 id toggle
+id toggleGuideButton
 id top
 id topPanel
 id touch_outside
@@ -3654,6 +3663,14 @@ id transition_position
 id transition_scene_layoutid_cache
 id transition_transform
 id triangle
+id tut_1
+id tut_2
+id tut_3
+id tut_4
+id tut_5
+id tut_6
+id tut_count
+id tut_welcome_message
 id unchecked
 id uniform
 id unlabeled
