@@ -379,9 +379,11 @@ public class MainActivity extends AppCompatActivity {
 
                 // Cycle through the tips
                 tipIndex = (tipIndex + 1) % mangoTips.length;
-
+                if(tipIndex >= 5){
+                    tipIndex = 0;
+                }
                 // Schedule the next tip update after 2 seconds
-                handler.postDelayed(this, 2000);
+                handler.postDelayed(this, 5000);
             }
         }, 0); // Start immediately
     }
