@@ -126,11 +126,24 @@ public class MainActivity extends AppCompatActivity {
 
         // Check if the username is already set
         SharedPreferences prefs = getSharedPreferences("AppPreferences", MODE_PRIVATE);
+        boolean isFirstTime = prefs.getBoolean("isFirstTimeLogin", true);
+        if(prefs.getBoolean("isFirstTimeLogin", true)){
+            dimLayout.bringToFront();
+            dimLayout.setVisibility(View.VISIBLE);
+        }else{
+            dimLayout.setVisibility(View.GONE);
+        }
         username = prefs.getString("username", null); // Default value is null if not set
         greetings.setText("Howdy, " + username);
         //TOGGLE GUIDE
         skipGuideButton.setOnClickListener(v -> {
-
+            SharedPreferences.Editor editor = prefs.edit();
+            editor.putBoolean("isFirstTimeLogin", false).apply();
+            if(prefs.getBoolean("isFirstTimeLogin", true)) {
+               dimLayout.setVisibility(View.VISIBLE);
+            } else {
+                dimLayout.setVisibility(View.GONE);
+            }
             dimLayout.bringToFront();
             TutorialCounter.tutorialStep += 100;
             tut_initial.setVisibility(View.VISIBLE);
@@ -140,8 +153,8 @@ public class MainActivity extends AppCompatActivity {
             tut_4.setVisibility(View.GONE);
             tut_5.setVisibility(View.GONE);
             tut_6.setVisibility(View.GONE);
-            guideCounter.setText(TutorialCounter.tutorialStep + " of 6");
-            updateTutorialStep();
+            guideCounter.setText(TutorialCounter.tutorialStep + " of 7");
+            updateTutorialStep(isFirstTime);
             skipGuideButton.setText("Skip");
             FrameLayout.LayoutParams params = (FrameLayout.LayoutParams) skipGuideButton.getLayoutParams();
             params.gravity = Gravity.TOP | Gravity.LEFT;
@@ -152,15 +165,15 @@ public class MainActivity extends AppCompatActivity {
         previousGuideButton.setOnClickListener(v -> {
             dimLayout.bringToFront();
             TutorialCounter.tutorialStep--;
-            guideCounter.setText(TutorialCounter.tutorialStep + " of 6");
-            updateTutorialStep();
+            guideCounter.setText(TutorialCounter.tutorialStep + " of 7");
+            updateTutorialStep(isFirstTime);
         });
 
         nextGuideButton.setOnClickListener(v -> {
             dimLayout.bringToFront();
             TutorialCounter.tutorialStep++;
-            guideCounter.setText(TutorialCounter.tutorialStep + " of 6");
-            updateTutorialStep();
+            guideCounter.setText(TutorialCounter.tutorialStep + " of 7");
+            updateTutorialStep(isFirstTime);
         });
         detectionCounter = 1;
 
@@ -184,9 +197,12 @@ public class MainActivity extends AppCompatActivity {
 //        }, 3000); // 5 seconds delay
 
         toggleGuideButton.setOnClickListener(v -> {
+            SharedPreferences.Editor editor = prefs.edit();
+            editor.putBoolean("isFirstTimeLogin", true);
+            editor.apply();
             TutorialCounter.tutorialStep = 0;
             tut_initial.setVisibility(View.VISIBLE);
-            guideCounter.setText(TutorialCounter.tutorialStep + " of 6");
+            guideCounter.setText(TutorialCounter.tutorialStep + " of 7");
             HighlightWidgets.highlightView(dimLayout);
 
         });
@@ -225,10 +241,10 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
-    private void updateTutorialStep(){
-        if(TutorialCounter.tutorialStep == 0){
-            dimLayout.setVisibility(View.VISIBLE); // Show the dim effect
-            tut_initial.setVisibility(View.VISIBLE);
+    private void updateTutorialStep(boolean isFirstTime){
+        if(TutorialCounter.tutorialStep == 0 && isFirstTime){
+//            dimLayout.setVisibility(View.VISIBLE); // Show the dim effect
+//            tut_initial.setVisibility(View.VISIBLE);
         }
         else if(TutorialCounter.tutorialStep == 1){
             dimLayout.setVisibility(View.VISIBLE); // Show the dim effect

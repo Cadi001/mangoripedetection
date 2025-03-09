@@ -53,13 +53,13 @@ id loading_spinner
 id logo
 id nextGuideButton
 id outputNextGuideButton
-id outputPrevGuideButton
 id outputSkipGuideButton
 id outputTextView
 id outputTxt
 id output_dim_layout
 id output_tut_1
 id output_tut_2
+id output_tut_3
 id output_tut_count
 id performSigninBtn
 id prevGuideButton

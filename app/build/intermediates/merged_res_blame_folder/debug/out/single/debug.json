@@ -60,6 +60,10 @@
         "source": "C:\\Users\\Ale\\.gradle\\daemon\\8.2\\com.example.mangosweetnessdetection.app-main-41:\\drawable\\custom_spinner.xml"
     },
     {
+        "merged": "com.example.mangosweetnessdetection.app-merged_res-39:/layout_activity_main.xml.flat",
+        "source": "com.example.mangosweetnessdetection.app-main-41:/layout/activity_main.xml"
+    },
+    {
         "merged": "C:\\Users\\Ale\\.gradle\\daemon\\8.2\\com.example.mangosweetnessdetection.app-merged_res-39:\\mipmap-hdpi_ic_launcher.webp.flat",
         "source": "C:\\Users\\Ale\\.gradle\\daemon\\8.2\\com.example.mangosweetnessdetection.app-main-41:\\mipmap-hdpi\\ic_launcher.webp"
     },
@@ -154,10 +158,6 @@
     {
         "merged": "C:\\Users\\Ale\\.gradle\\daemon\\8.2\\com.example.mangosweetnessdetection.app-merged_res-39:\\drawable_img.png.flat",
         "source": "C:\\Users\\Ale\\.gradle\\daemon\\8.2\\com.example.mangosweetnessdetection.app-main-41:\\drawable\\img.png"
-    },
-    {
-        "merged": "com.example.mangosweetnessdetection.app-merged_res-39:/layout_activity_output.xml.flat",
-        "source": "com.example.mangosweetnessdetection.app-main-41:/layout/activity_output.xml"
     },
     {
         "merged": "C:\\Users\\Ale\\.gradle\\daemon\\8.2\\com.example.mangosweetnessdetection.app-merged_res-39:\\drawable_gallery_icon.png.flat",

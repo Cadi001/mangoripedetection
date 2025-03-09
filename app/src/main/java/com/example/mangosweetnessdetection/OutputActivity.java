@@ -26,40 +26,45 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class OutputActivity extends AppCompatActivity {
-    TextView outputTextView, outputTutorialCount, out_tut_1, out_tut_2;
+    TextView outputTextView, outputTutorialCount, out_tut_1, out_tut_2, out_tut_3;
     Button scanAnotherMangoButton, previousButton, nextButton, skipButton;
     ImageView passedImage;
     FirebaseFirestore db;
     String username;
     TextView showRatingsDialogButton;
     FrameLayout outputDimLayout;
+    Boolean isTutorialDone;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_output);
+        SharedPreferences prefs = getSharedPreferences("AppPreferences", MODE_PRIVATE);
+
         outputTextView = findViewById(R.id.outputTextView);
         scanAnotherMangoButton = findViewById(R.id.scanAnotherMangoButton);
         showRatingsDialogButton = findViewById(R.id.showRatingsDialogButton);
 
-        previousButton = findViewById(R.id.outputPrevGuideButton);
         nextButton = findViewById(R.id.outputNextGuideButton);
         skipButton = findViewById(R.id.outputSkipGuideButton);
         outputTutorialCount = findViewById(R.id.output_tut_count);
         outputDimLayout = findViewById(R.id.output_dim_layout);
         out_tut_1 = findViewById(R.id.output_tut_1);
         out_tut_2 = findViewById(R.id.output_tut_2);
+        out_tut_3 = findViewById(R.id.output_tut_3);
         showGuide();
-        if(true){
+
+
+        if(prefs.getBoolean("isFirstTimeLogin", true)){
             outputDimLayout.bringToFront();
             outputDimLayout.setVisibility(View.VISIBLE);
+        }else{
+            outputDimLayout.setVisibility(View.GONE);
         }
-        previousButton.setOnClickListener(v -> {
-            startActivity(new Intent(this, MainActivity.class));
-        });
+
         nextButton.setOnClickListener(v -> {
             TutorialCounter.tutorialStep++;
-            outputTutorialCount.setText(TutorialCounter.tutorialStep + " of 6");
+            outputTutorialCount.setText(TutorialCounter.tutorialStep + " of 7");
             showGuide();
 
             skipButton.setText("Finish");
@@ -70,13 +75,19 @@ public class OutputActivity extends AppCompatActivity {
 
         });
         skipButton.setOnClickListener(v -> {
+            SharedPreferences.Editor editor = prefs.edit();
+            editor.putBoolean("isFirstTimeLogin", false).apply();
+            if(prefs.getBoolean("isFirstTimeLogin", true)) {
+                outputDimLayout.setVisibility(View.VISIBLE);
+            } else {
+                outputDimLayout.setVisibility(View.GONE);
+            }
             startActivity(new Intent(this, MainActivity.class));
         });
 
         db = FirebaseFirestore.getInstance();
-        SharedPreferences prefs = getSharedPreferences("AppPreferences", MODE_PRIVATE);
         username = prefs.getString("username", "Anonymous"); // Default value is null if not set
-
+        isTutorialDone = prefs.getBoolean("isTutorialDone", false);
 
         Intent intent = getIntent();
 
@@ -100,13 +111,24 @@ public class OutputActivity extends AppCompatActivity {
         if(TutorialCounter.tutorialStep == 5){
             outputDimLayout.bringToFront();
             outputTextView.bringToFront();
+            out_tut_3.setVisibility(View.GONE);
             out_tut_2.setVisibility(View.GONE);
             out_tut_1.setVisibility(View.VISIBLE);
         }
-        else if(TutorialCounter.tutorialStep == 6){
+        if(TutorialCounter.tutorialStep == 6){
             outputDimLayout.bringToFront();
+            outputTextView.bringToFront();
             showRatingsDialogButton.bringToFront();
+            out_tut_3.setVisibility(View.GONE);
             out_tut_2.setVisibility(View.VISIBLE);
+            out_tut_1.setVisibility(View.GONE);
+        }
+        else if(TutorialCounter.tutorialStep == 7){
+            outputDimLayout.bringToFront();
+            scanAnotherMangoButton.bringToFront();
+            nextButton.setVisibility(View.GONE);
+            out_tut_3.setVisibility(View.VISIBLE);
+            out_tut_2.setVisibility(View.GONE);
             out_tut_1.setVisibility(View.GONE);
         }
     }
