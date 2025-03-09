@@ -101,6 +101,13 @@ public class OutputActivity extends AppCompatActivity {
         }, 60000);
 
         scanAnotherMangoButton.setOnClickListener(v -> {
+            SharedPreferences.Editor editor = prefs.edit();
+            editor.putBoolean("isFirstTimeLogin", false).apply();
+            if(prefs.getBoolean("isFirstTimeLogin", true)) {
+                outputDimLayout.setVisibility(View.VISIBLE);
+            } else {
+                outputDimLayout.setVisibility(View.GONE);
+            }
           startActivity(new Intent(OutputActivity.this, MainActivity.class));
         });
         showRatingsDialogButton.setOnClickListener(v -> {

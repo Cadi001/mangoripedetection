@@ -16,20 +16,20 @@
         "source": "C:\\Users\\Ale\\.gradle\\daemon\\8.2\\com.example.mangosweetnessdetection.app-main-41:\\mipmap-xxhdpi\\ic_launcher.webp"
     },
     {
-        "merged": "C:\\Users\\Ale\\.gradle\\daemon\\8.2\\com.example.mangosweetnessdetection.app-merged_res-39:\\drawable_ic_launcher_background.xml.flat",
-        "source": "C:\\Users\\Ale\\.gradle\\daemon\\8.2\\com.example.mangosweetnessdetection.app-main-41:\\drawable\\ic_launcher_background.xml"
-    },
-    {
-        "merged": "C:\\Users\\Ale\\.gradle\\daemon\\8.2\\com.example.mangosweetnessdetection.app-merged_res-39:\\mipmap-xxhdpi_ic_launcher_round.webp.flat",
-        "source": "C:\\Users\\Ale\\.gradle\\daemon\\8.2\\com.example.mangosweetnessdetection.app-main-41:\\mipmap-xxhdpi\\ic_launcher_round.webp"
+        "merged": "C:\\Users\\Ale\\.gradle\\daemon\\8.2\\com.example.mangosweetnessdetection.app-merged_res-39:\\mipmap-hdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\Ale\\.gradle\\daemon\\8.2\\com.example.mangosweetnessdetection.app-main-41:\\mipmap-hdpi\\ic_launcher_round.webp"
     },
     {
         "merged": "C:\\Users\\Ale\\.gradle\\daemon\\8.2\\com.example.mangosweetnessdetection.app-merged_res-39:\\drawable_border.xml.flat",
         "source": "C:\\Users\\Ale\\.gradle\\daemon\\8.2\\com.example.mangosweetnessdetection.app-main-41:\\drawable\\border.xml"
     },
     {
-        "merged": "C:\\Users\\Ale\\.gradle\\daemon\\8.2\\com.example.mangosweetnessdetection.app-merged_res-39:\\mipmap-hdpi_ic_launcher_round.webp.flat",
-        "source": "C:\\Users\\Ale\\.gradle\\daemon\\8.2\\com.example.mangosweetnessdetection.app-main-41:\\mipmap-hdpi\\ic_launcher_round.webp"
+        "merged": "C:\\Users\\Ale\\.gradle\\daemon\\8.2\\com.example.mangosweetnessdetection.app-merged_res-39:\\mipmap-xxhdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\Ale\\.gradle\\daemon\\8.2\\com.example.mangosweetnessdetection.app-main-41:\\mipmap-xxhdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "C:\\Users\\Ale\\.gradle\\daemon\\8.2\\com.example.mangosweetnessdetection.app-merged_res-39:\\drawable_ic_launcher_background.xml.flat",
+        "source": "C:\\Users\\Ale\\.gradle\\daemon\\8.2\\com.example.mangosweetnessdetection.app-main-41:\\drawable\\ic_launcher_background.xml"
     },
     {
         "merged": "C:\\Users\\Ale\\.gradle\\daemon\\8.2\\com.example.mangosweetnessdetection.app-merged_res-39:\\mipmap-hdpi_ic_launcher_foreground.webp.flat",

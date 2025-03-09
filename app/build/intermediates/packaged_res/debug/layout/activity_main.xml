@@ -13,13 +13,14 @@
         android:layout_height="wrap_content"
         android:layout_alignTop="@+id/buttonDetect"
         android:layout_alignEnd="@+id/outputTxt"
-        android:layout_marginStart="57dp"
-        android:layout_marginTop="168dp"
-        android:layout_marginEnd="-402dp"
+        android:layout_marginStart="64dp"
+        android:layout_marginTop="183dp"
+        android:layout_marginEnd="-409dp"
         android:layout_toEndOf="@+id/buttonDetect"
         android:background="@color/transparent"
         android:tint="@color/a3_light"
         app:srcCompat="@drawable/help" />
+
     <TextView
         android:id="@+id/textView3"
         android:layout_width="wrap_content"
