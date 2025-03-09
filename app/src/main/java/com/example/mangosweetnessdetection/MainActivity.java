@@ -89,12 +89,15 @@ public class MainActivity extends AppCompatActivity {
     ImageButton toggleGuideButton;
     TextView guideCounter;
 
-    int tutorialStep = 0;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+
+
         username = "Anonymous";
         imageView = findViewById(R.id.imageView);
         buttonSelectFromGallery = findViewById(R.id.buttonSelectFromGallery);
@@ -109,6 +112,7 @@ public class MainActivity extends AppCompatActivity {
         previousGuideButton = findViewById(R.id.prevGuideButton);
         nextGuideButton = findViewById(R.id.nextGuideButton);
         guideCounter = findViewById(R.id.tut_count);
+        dimLayout = findViewById(R.id.dim_layout);
 
         tut_initial = findViewById(R.id.tut_welcome_message);
         tut_1 = findViewById(R.id.tut_1);
@@ -126,7 +130,9 @@ public class MainActivity extends AppCompatActivity {
         greetings.setText("Howdy, " + username);
         //TOGGLE GUIDE
         skipGuideButton.setOnClickListener(v -> {
-            tutorialStep += 100;
+
+            dimLayout.bringToFront();
+            TutorialCounter.tutorialStep += 100;
             tut_initial.setVisibility(View.VISIBLE);
             tut_1.setVisibility(View.GONE);
             tut_2.setVisibility(View.GONE);
@@ -134,7 +140,7 @@ public class MainActivity extends AppCompatActivity {
             tut_4.setVisibility(View.GONE);
             tut_5.setVisibility(View.GONE);
             tut_6.setVisibility(View.GONE);
-            guideCounter.setText(tutorialStep + " of 5");
+            guideCounter.setText(TutorialCounter.tutorialStep + " of 6");
             updateTutorialStep();
             skipGuideButton.setText("Skip");
             FrameLayout.LayoutParams params = (FrameLayout.LayoutParams) skipGuideButton.getLayoutParams();
@@ -144,14 +150,16 @@ public class MainActivity extends AppCompatActivity {
         });
 
         previousGuideButton.setOnClickListener(v -> {
-            tutorialStep--;
-            guideCounter.setText(tutorialStep + " of 5");
+            dimLayout.bringToFront();
+            TutorialCounter.tutorialStep--;
+            guideCounter.setText(TutorialCounter.tutorialStep + " of 6");
             updateTutorialStep();
         });
 
         nextGuideButton.setOnClickListener(v -> {
-            tutorialStep++;
-            guideCounter.setText(tutorialStep + " of 5");
+            dimLayout.bringToFront();
+            TutorialCounter.tutorialStep++;
+            guideCounter.setText(TutorialCounter.tutorialStep + " of 6");
             updateTutorialStep();
         });
         detectionCounter = 1;
@@ -176,9 +184,9 @@ public class MainActivity extends AppCompatActivity {
 //        }, 3000); // 5 seconds delay
 
         toggleGuideButton.setOnClickListener(v -> {
-            tutorialStep = 0;
+            TutorialCounter.tutorialStep = 0;
             tut_initial.setVisibility(View.VISIBLE);
-            guideCounter.setText(tutorialStep + " of 5");
+            guideCounter.setText(TutorialCounter.tutorialStep + " of 6");
             HighlightWidgets.highlightView(dimLayout);
 
         });
@@ -218,11 +226,11 @@ public class MainActivity extends AppCompatActivity {
         });
     }
     private void updateTutorialStep(){
-        if(tutorialStep == 0){
+        if(TutorialCounter.tutorialStep == 0){
             dimLayout.setVisibility(View.VISIBLE); // Show the dim effect
             tut_initial.setVisibility(View.VISIBLE);
         }
-        else if(tutorialStep == 1){
+        else if(TutorialCounter.tutorialStep == 1){
             dimLayout.setVisibility(View.VISIBLE); // Show the dim effect
 
             buttonSelectFromGallery.bringToFront();
@@ -240,7 +248,7 @@ public class MainActivity extends AppCompatActivity {
             tut_6.setVisibility(View.GONE);
 
 
-        } else if (tutorialStep == 2) {
+        } else if (TutorialCounter.tutorialStep == 2) {
             dimLayout.setVisibility(View.VISIBLE); // Show the dim effect
 
             buttonTakePhoto.bringToFront();
@@ -258,7 +266,7 @@ public class MainActivity extends AppCompatActivity {
             tut_6.setVisibility(View.GONE);
 
 
-        }else if (tutorialStep == 3) {
+        }else if (TutorialCounter.tutorialStep == 3) {
             dimLayout.setVisibility(View.VISIBLE); // Show the dim effect
 
             imageView.bringToFront();
@@ -276,7 +284,7 @@ public class MainActivity extends AppCompatActivity {
             tut_6.setVisibility(View.GONE);
 
 
-        }else if (tutorialStep == 4) {
+        }else if (TutorialCounter.tutorialStep == 4) {
             dimLayout.setVisibility(View.VISIBLE); // Show the dim effect
 
             buttonDetect.bringToFront();
@@ -294,11 +302,8 @@ public class MainActivity extends AppCompatActivity {
             tut_6.setVisibility(View.GONE);
 
 
-        }else if (tutorialStep == 5) {
+        }else if (TutorialCounter.tutorialStep == 5) {
             dimLayout.setVisibility(View.VISIBLE); // Show the dim effect
-
-            outputTxt.bringToFront();
-            outputTxt.setVisibility(View.VISIBLE);
 
             tut_1.setVisibility(View.GONE);
             tut_2.setVisibility(View.GONE);
@@ -307,11 +312,20 @@ public class MainActivity extends AppCompatActivity {
             tut_5.setVisibility(View.VISIBLE);
             tut_6.setVisibility(View.GONE);
 
+            startActivity(new Intent(this, OutputActivity.class));
 
-        }else if (tutorialStep == 6) {
+
+
+        }else if (TutorialCounter.tutorialStep == 6) {
             dimLayout.setVisibility(View.VISIBLE); // Show the dim effect
 
             gotoRatings.bringToFront();
+
+            skipGuideButton.setText("Finish");
+            FrameLayout.LayoutParams params = (FrameLayout.LayoutParams) skipGuideButton.getLayoutParams();
+            params.gravity = Gravity.TOP | Gravity.CENTER_HORIZONTAL;
+            params.setMargins(0, 5,0,0);
+            skipGuideButton.setLayoutParams(params);
 
             tut_initial.setVisibility(View.GONE);
             tut_1.setVisibility(View.GONE);
@@ -321,11 +335,7 @@ public class MainActivity extends AppCompatActivity {
             tut_5.setVisibility(View.GONE);
             tut_6.setVisibility(View.VISIBLE);
 
-            skipGuideButton.setText("Finish");
-            FrameLayout.LayoutParams params = (FrameLayout.LayoutParams) skipGuideButton.getLayoutParams();
-            params.gravity = Gravity.TOP | Gravity.CENTER_HORIZONTAL;
-            params.setMargins(0, 5,0,0);
-            skipGuideButton.setLayoutParams(params);
+
 
         }else{
             buttonSelectFromGallery.setEnabled(true);

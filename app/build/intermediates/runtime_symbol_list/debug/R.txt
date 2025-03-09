@@ -3051,6 +3051,7 @@ int drawable gallery_icon 0x7f0700a0
 int drawable googleg_disabled_color_18 0x7f0700a1
 int drawable googleg_standard_color_18 0x7f0700a2
 int drawable guide 0x7f070101
+int drawable help 0x7f070102
 int drawable ic_arrow_back_black_24 0x7f0700a3
 int drawable ic_clear_black_24 0x7f0700a4
 int drawable ic_clock_black_24dp 0x7f0700a5
@@ -3506,8 +3507,15 @@ int id open_search_view_status_bar_spacer 0x7f080163
 int id open_search_view_toolbar 0x7f080164
 int id open_search_view_toolbar_container 0x7f080165
 int id outline 0x7f080166
+int id outputNextGuideButton 0x7f08022d
+int id outputPrevGuideButton 0x7f08022e
+int id outputSkipGuideButton 0x7f08022f
 int id outputTextView 0x7f080167
 int id outputTxt 0x7f080168
+int id output_dim_layout 0x7f080230
+int id output_tut_1 0x7f080231
+int id output_tut_2 0x7f080232
+int id output_tut_count 0x7f080233
 int id outward 0x7f080169
 int id overshoot 0x7f08016a
 int id packed 0x7f08016b

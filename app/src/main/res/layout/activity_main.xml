@@ -7,6 +7,19 @@
     android:background="@color/a4">
 
 
+    <ImageButton
+        android:id="@+id/toggleGuideButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/buttonDetect"
+        android:layout_alignEnd="@+id/outputTxt"
+        android:layout_marginStart="57dp"
+        android:layout_marginTop="168dp"
+        android:layout_marginEnd="-402dp"
+        android:layout_toEndOf="@+id/buttonDetect"
+        android:background="@color/transparent"
+        android:tint="@color/a3_light"
+        app:srcCompat="@drawable/help" />
     <TextView
         android:id="@+id/textView3"
         android:layout_width="wrap_content"
@@ -88,7 +101,7 @@
         android:text="Output will be shown here"
         android:textColor="@color/black"
         android:textSize="20sp"
-        android:visibility="invisible" />
+        android:visibility="gone" />
 
     <Button
         android:id="@+id/gotoRatings"
@@ -96,8 +109,8 @@
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
-        android:layout_marginTop="7dp"
-        android:layout_marginEnd="7dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="2dp"
         android:backgroundTint="#002D412D"
         android:text="View Ratings"
         android:textColor="@color/a2" />
@@ -113,18 +126,7 @@
         android:textColor="@color/a2"
         android:textSize="16sp" />
 
-    <ImageButton
-        android:id="@+id/toggleGuideButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignTop="@+id/buttonDetect"
-        android:layout_alignEnd="@+id/outputTxt"
-        android:layout_marginStart="50dp"
-        android:layout_marginTop="-10dp"
-        android:layout_marginEnd="0dp"
-        android:layout_toEndOf="@+id/buttonDetect"
-        android:background="@color/transparent"
-        app:srcCompat="@drawable/guide" />
+
     <FrameLayout
         android:id="@+id/dim_layout"
         android:layout_width="match_parent"
@@ -205,7 +207,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="top|center"
             android:layout_marginTop="50dp"
-            android:text='You can see other users review here \n You can also leave a review after 5 concutive use of the our Detector'
+            android:text='You can see other users review here'
             android:textColor="@color/a3_light"
             android:layout_marginHorizontal="50dp"
             android:visibility="gone" />

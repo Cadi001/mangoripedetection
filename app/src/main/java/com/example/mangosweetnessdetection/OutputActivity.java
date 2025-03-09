@@ -9,10 +9,12 @@ import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.os.Handler;
 import android.util.Base64;
+import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.RatingBar;
 import android.widget.TextView;
@@ -24,12 +26,13 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class OutputActivity extends AppCompatActivity {
-    TextView outputTextView;
-    Button scanAnotherMangoButton;
+    TextView outputTextView, outputTutorialCount, out_tut_1, out_tut_2;
+    Button scanAnotherMangoButton, previousButton, nextButton, skipButton;
     ImageView passedImage;
     FirebaseFirestore db;
     String username;
     TextView showRatingsDialogButton;
+    FrameLayout outputDimLayout;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,6 +41,38 @@ public class OutputActivity extends AppCompatActivity {
         outputTextView = findViewById(R.id.outputTextView);
         scanAnotherMangoButton = findViewById(R.id.scanAnotherMangoButton);
         showRatingsDialogButton = findViewById(R.id.showRatingsDialogButton);
+
+        previousButton = findViewById(R.id.outputPrevGuideButton);
+        nextButton = findViewById(R.id.outputNextGuideButton);
+        skipButton = findViewById(R.id.outputSkipGuideButton);
+        outputTutorialCount = findViewById(R.id.output_tut_count);
+        outputDimLayout = findViewById(R.id.output_dim_layout);
+        out_tut_1 = findViewById(R.id.output_tut_1);
+        out_tut_2 = findViewById(R.id.output_tut_2);
+        showGuide();
+        if(true){
+            outputDimLayout.bringToFront();
+            outputDimLayout.setVisibility(View.VISIBLE);
+        }
+        previousButton.setOnClickListener(v -> {
+            startActivity(new Intent(this, MainActivity.class));
+        });
+        nextButton.setOnClickListener(v -> {
+            TutorialCounter.tutorialStep++;
+            outputTutorialCount.setText(TutorialCounter.tutorialStep + " of 6");
+            showGuide();
+
+            skipButton.setText("Finish");
+            FrameLayout.LayoutParams params = (FrameLayout.LayoutParams) skipButton.getLayoutParams();
+            params.gravity = Gravity.TOP | Gravity.CENTER;
+            params.setMargins(0, 50,0,0);
+            skipButton.setLayoutParams(params);
+
+        });
+        skipButton.setOnClickListener(v -> {
+            startActivity(new Intent(this, MainActivity.class));
+        });
+
         db = FirebaseFirestore.getInstance();
         SharedPreferences prefs = getSharedPreferences("AppPreferences", MODE_PRIVATE);
         username = prefs.getString("username", "Anonymous"); // Default value is null if not set
@@ -61,7 +96,20 @@ public class OutputActivity extends AppCompatActivity {
             showRateDialog();
         });
     }
-
+    private void showGuide(){
+        if(TutorialCounter.tutorialStep == 5){
+            outputDimLayout.bringToFront();
+            outputTextView.bringToFront();
+            out_tut_2.setVisibility(View.GONE);
+            out_tut_1.setVisibility(View.VISIBLE);
+        }
+        else if(TutorialCounter.tutorialStep == 6){
+            outputDimLayout.bringToFront();
+            showRatingsDialogButton.bringToFront();
+            out_tut_2.setVisibility(View.VISIBLE);
+            out_tut_1.setVisibility(View.GONE);
+        }
+    }
     private void showRateDialog() {
         // Create an AlertDialog
         androidx.appcompat.app.AlertDialog.Builder builder = new androidx.appcompat.app.AlertDialog.Builder(this);

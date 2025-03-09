@@ -303,8 +303,8 @@
                         <option name="values">
                           <map>
                             <entry key="assetSourceType" value="FILE" />
-                            <entry key="outputName" value="guide" />
-                            <entry key="sourceFile" value="C:\Users\Ale\Downloads\guide.svg" />
+                            <entry key="outputName" value="help" />
+                            <entry key="sourceFile" value="C:\Users\Ale\Downloads\help.svg" />
                           </map>
                         </option>
                       </PersistentState>
