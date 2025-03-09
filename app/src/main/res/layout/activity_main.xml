@@ -177,7 +177,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="top|center"
             android:layout_marginTop="50dp"
-            android:text='Once you select a photo from either Galery or Camera you will see the uploaded image here'
+            android:text='Once you select a photo from either Gallery or Camera you will see the uploaded image here'
             android:textColor="@color/a3_light"
             android:layout_marginHorizontal="50dp"
             android:visibility="gone" />
