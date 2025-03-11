@@ -70,11 +70,46 @@ public class MainActivity extends AppCompatActivity {
     private String currentPhotoPath;
     int detectionCounter;
     private final String[] mangoTips = {
-            "1. Look for mangoes with a vibrant color and a pleasant fruity aroma.",
-            "2. Gently squeeze the mango; ripe ones will give slightly without being mushy.",
-            "3. Check for firmness; avoid overly soft or shriveled mangoes.",
-            "4. Avoid mangoes with dark spots, bruises, or signs of decay.",
-            "5. Smell the stem end; a sweet, fragrant aroma indicates ripeness."
+
+            "Pick mangoes that showcase a rich, vibrant color and a glossy, smooth skin, accompanied by a sweet, fragrant aroma.",
+            "Look for a slight 'give' near the stem. A small amount of softness indicates that the mango is ripe and ready to eat.",
+            "Choose mangoes with an even, bright color. A vibrant color suggests the mango has been properly ripened.",
+            "Smell the stem end for a fruity aroma. A sweet, fragrant smell near the stem usually signals ripeness and a rich flavor.",
+            "Check for a plump shape. A full, rounded mango is typically sweeter and juicier than flat or irregularly shaped ones.",
+            "Avoid mangoes with overly wrinkled skin. While minor wrinkles are normal, excessive wrinkling can indicate the mango is overripe or dried out.",
+            "Ripe mangoes will feel heavy for their size. The heavier the mango, the more juice it contains, which means it’s likely to be flavorful.",
+            "Look for a natural blush or red hue. While not all mango varieties turn red, those with a touch of red usually indicate ripeness.",
+            "Examine the skin for smoothness. Mangoes with smooth, unblemished skin tend to have better texture and flavor.",
+            "Mangoes ripen faster at room temperature. Leaving them on the counter, away from direct sunlight, will help them soften and sweeten.",
+            "Store unripe mangoes in a paper bag with an apple. Apples produce ethylene gas, which speeds up the ripening process for mangoes.",
+            "Avoid mangoes that feel overly hard or stiff. These are underripe and may not have the sweetness or juiciness you’re looking for.",
+            "Ripen mangoes at room temperature, not in the fridge. Refrigerating an unripe mango can delay or stop the ripening process altogether.",
+            "Once ripe, refrigerate mangoes to extend freshness. Storing ripe mangoes in the fridge keeps them fresh for about 4-5 days.",
+            "Store cut mangoes in an airtight container. Once cut, refrigerate mangoes in a sealed container to preserve freshness for up to 1-2 days.",
+            "Choose mangoes with a rich, orange-yellow color. These mangoes are usually fully ripe and packed with sweetness.",
+            "Look for mangoes with a vibrant color and a pleasant fruity aroma.",
+            "Natural ripening produces a sweet aroma, while carbide-ripened mangoes often lack scent.",
+            "Gently squeeze the mango ripe ones will give slightly without being mushy.",
+            "Mangoes ripen faster when stored in a paper bag with bananas or apples.",
+            "Avoid mangoes with dark spots, bruises, or signs of decay.",
+            "Avoid unnaturally uniform yellow mangoes with no aroma they may be carbide ripened.",
+            "Firm green mangoes are sour and great for pickles or chutneys.",
+            "Avoid mangoes with a dried-out stem. A shriveled or dry stem can indicate over-ripeness or that the mango has been sitting too long.",
+            "Inspect the skin for cracks or tears. Cracks may indicate that the mango is overripe or has been handled roughly, which can affect flavor and texture.",
+            "Green mangoes are perfect for savory dishes. They’re firmer, tangier, and ideal for making chutneys, pickles, or salsas.",
+            "Gently squeeze the mango at the cheeks to check ripeness. Ripe mangoes will yield slightly when pressed, especially around the broader, outer parts.",
+            "Mangoes with deep yellow-orange hues tend to be the sweetest. The richer the color, the higher the sugar content and the better the flavor.",
+            "Avoid mangoes that feel soft all over. If the entire mango is too soft, it may be overripe and could have an overly mushy texture.",
+            "Look for small, uniform dimples on the skin. These are a sign of a mature, well-grown mango that has likely reached the peak of ripeness.",
+            "Mangoes with a fruity scent near the stem are ripe. A good mango will give off a pleasant, sweet aroma when it’s ready to eat.",
+            "Darkening near the stem can indicate peak ripeness. A slight darkening or even a few small spots near the stem can signal that the mango is at its sweetest.",
+            "Use a plastic or paper bag to ripen mangoes quickly. Placing mangoes in a closed environment traps the ethylene gas and speeds up the ripening process.",
+            "Ripe mangoes should have slight softness at the stem. If the mango is soft around the stem but firmer towards the sides, it’s at the perfect ripeness.",
+            "Place firm mangoes in a warm spot to ripen. Mangoes ripen faster in a warm environment, especially in the absence of direct sunlight.",
+            "Avoid storing mangoes in direct sunlight. Too much exposure can cause the fruit to become too soft or dry out.",
+            "Tender skin with slight wrinkles near the stem often means sweetness. Mangoes with this texture are usually very ripe and ready to eat.",
+            "Choose mangoes with no green spots or uneven coloring. Mangoes with consistent color and no green patches are typically more flavorful and ripe."
+
     };
     private int tipIndex = 0;
     private Handler handler = new Handler();
@@ -379,7 +414,7 @@ public class MainActivity extends AppCompatActivity {
 
                 // Cycle through the tips
                 tipIndex = (tipIndex + 1) % mangoTips.length;
-                if(tipIndex >= 5){
+                if(tipIndex >= 38){
                     tipIndex = 0;
                 }
                 // Schedule the next tip update after 2 seconds

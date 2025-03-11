@@ -130,7 +130,7 @@
             android:layout_gravity="bottom|center"
             android:layout_marginTop="50dp"
             android:layout_marginBottom="35dp"
-            android:text='5 of 6'
+            android:text='5 of 7'
             android:textColor="@color/a3_light" />
 
     </FrameLayout>
