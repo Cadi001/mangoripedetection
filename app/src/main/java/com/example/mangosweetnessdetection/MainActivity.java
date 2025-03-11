@@ -530,15 +530,22 @@ public class MainActivity extends AppCompatActivity {
                             if(confidence <= 0.5){
 //                                outputTxt.setText("Probability: "+confidence +"\nThe image provided is less likely identified as carabao mango.");
 //                                outputTxt.setVisibility(View.VISIBLE);
-                                outputMessage = "Probability: "+confidence +"\nThe image provided is less likely identified as carabao mango.";
+                                outputMessage = "\\nThe image provided is LESS likely identified as Carabao Mango.\" +\n" +
+                                        "                                        \"\\n\\nCarabao Mango Tips\\n\\n\" +\n" +
+                                        "                                        \"• Ripening Indicators:  A fully ripened Carabao mango has bright yellow skin with little to no green patches.\\n\\n\" +\n" +
+                                        "                                        \"• Health Benefits:  Rich in vitamin C, fiber, and antioxidants, Carabao mangoes help boost the immune system and promote digestion.\"+\n" +
+                                        "                                        \"\\n\\n⚠\\uFE0FIf you believe this is a Carabao Mango, try capturing the image under better lighting or from a different angle for better accuracy.⚠\\uFE0F\"";
                             }
                             else if(predictionClass.equals("Unripe"))
                             {
 //                                outputTxt.setText("Probability: "+confidence +"\nSweet level: Sour, tangy, and slightly astringent with a firm \nTips:\nThese are best for savory dishes like salads, chutneys, or pickles. " +
 //                                        "Avoid eating them raw as they can be very sour and astringent. Add salt or spices to balance the tartness.");
 //                                outputTxt.setVisibility(View.VISIBLE);
-                                outputMessage = "Probability: "+confidence +"\n1. Very Sour \nSweet level: Sour, tangy, and slightly astringent with a firm \nTips:\nThese are best for savory dishes like salads, chutneys, or pickles. " +
-                                        "Avoid eating them raw as they can be very sour and astringent. Add salt or spices to balance the tartness.";
+                                outputMessage = "Sweet level: \uD83E\uDD6D\n1 (Very Sour) - Sour, tangy, and slightly astringent, with a firm texture that gives a sharp, mouth-puckering taste. \n\nTips/Recipe:\nSour mangoes " +
+                                        "are perfect for tangy snacks, refreshing drinks, or adding a zesty kick to various dishes. " +
+                                        "They can be extremely sour and astringent when eaten raw, so it's best to pair them with salt, spices, and many more! \n\nNatural vs Carbide Ripening:\nNaturally ripened mangoes have a " +
+                                        "sweet aroma and uneven skin with yellow, red, or orange shades. In contrast, carbide-ripened mangoes are uniformly yellow, lack fragrance, and are chemically ripened.";
+
 
                             }
                             else if(predictionClass.equals("Early Ripe"))
@@ -546,8 +553,11 @@ public class MainActivity extends AppCompatActivity {
 //                                outputTxt.setText("Probability: "+confidence +"\nSweet level: Slightly sweet with a mild tartness \nTips:\nPerfect for slicing and adding to fruit salads or eating as a slightly tart snack. " +
 //                                        "If you prefer sweeter mangoes, let them sit at room temperature for a couple more days to ripen further.");
 //                                outputTxt.setVisibility(View.VISIBLE);
-                                outputMessage = "Probability: "+confidence +"\n2. Sour \nSweet level: Slightly sweet with a mild tartness \nTips:\nPerfect for slicing and adding to fruit salads or eating as a slightly tart snack. " +
-                                        "If you prefer sweeter mangoes, let them sit at room temperature for a couple more days to ripen further.";
+                                outputMessage = "Sweet level: \uD83E\uDD6D\uD83E\uDD6D\n2 (Sour) - Slightly sweet with a mild tartness, offering a balanced flavor that is both refreshing and " +
+                                        "subtly tangy. \n\nTips/Recipe:\nPerfect for slicing and adding to fruit salads or eating as a slightly tart snack. " +
+                                        "Early ripe mangoes are mildly sweet and slightly firm, perfect for enjoying fresh or adding to salads. \n\nNatural vs Carbide Ripening:\nTo identify " +
+                                        "naturally ripened mangoes, check the texture (softer), aroma (sweet and fragrant), and color (slightly varied). In contrast, carbide-ripened ones stay " +
+                                        "firm, lack fragrance, and appear uniformly yellow.";
 
                             }
                             else if(predictionClass.equals("Partially Ripe"))
@@ -555,8 +565,11 @@ public class MainActivity extends AppCompatActivity {
 //                                outputTxt.setText("Probability: "+confidence +"\nSweet level: Balanced between sweet and tart with a juicy \nTips:\nThese are great for smoothies, salsas, or desserts that need a balance of sweet" +
 //                                        " and tangy flavors. Their firmer texture makes them ideal for slicing without becoming too soft.");
 //                                outputTxt.setVisibility(View.VISIBLE);
-                                outputMessage = "Probability: "+confidence +"\n3. Neutral\nSweet level: Balanced between sweet and tart with a juicy \nTips:\nThese are great for smoothies, salsas, or desserts that need a balance of sweet" +
-                                        " and tangy flavors. Their firmer texture makes them ideal for slicing without becoming too soft.";
+                                outputMessage =  "Sweet level: \uD83E\uDD6D\uD83E\uDD6D\uD83E\uDD6D\n3 (Neutral) - These mangoes have a perfectly balanced blend of sweetness and tartness, " +
+                                        "delivering a juicy, firm texture that enhances their refreshing and satisfying taste. \n\nTips/Recipe:\nGreat for smoothies, salsas, or desserts " +
+                                        "needing a sweet-tangy balance, their firm texture makes them perfect for slicing without getting too soft. \n\nNatural vs Carbide Ripening:\n" +
+                                        "Carbide-ripened feel hard even when yellow, lacking the natural softness of ripe fruit. Naturally ripened mangoes are softer and emit a sweet, " +
+                                        "fragrant aroma, indicating their full ripeness and natural aging process.";
 
                             }
                             else if(predictionClass.equals("Ripe"))
@@ -565,9 +578,11 @@ public class MainActivity extends AppCompatActivity {
 //                                        "ideal for snacking, fruit salads, or as a topping for yogurt and ice cream. Store them in the refrigerator if not consuming immediately to preserve their flavor" +
 //                                        " and texture.");
 //                                outputTxt.setVisibility(View.VISIBLE);
-                                outputMessage = "Probability: "+confidence +"\n4.Sweet \nSweet level: Sweet, rich, and aromatic with a juicy, soft, and smooth texture \nTips:\nEnjoy these fresh, in desserts, or as a juice. Ripe mangoes are " +
-                                        "ideal for snacking, fruit salads, or as a topping for yogurt and ice cream. Store them in the refrigerator if not consuming immediately to preserve their flavor" +
-                                        " and texture.";
+                                outputMessage = "Sweet level: \uD83E\uDD6D\uD83E\uDD6D\uD83E\uDD6D\uD83E\uDD6D\n4 (Sweet) - Sweet, rich, and aromatic, with a juicy, smooth texture that melts in " +
+                                        "your mouth, delivering a perfectly balanced tropical sweetness in every indulgent bite.\n\nTips/Recipe:\nEnjoy them fresh, in desserts, or " +
+                                        "blended into a refreshing juice or shake. Ripe mangoes are perfect for snacking, fruit salads, or as a topping for yogurt and ice cream.  \n" +
+                                        "\nNatural vs Carbide Ripening:\nCheck for a powdery residue on the skin, a clear sign of carbide ripening. Naturally ripened mangoes have " +
+                                        "a smooth, clean texture, a fresh, fruity aroma, and a more authentic, flavorful taste.";
 
                             }
                             else if(confidence >= 0.9 && predictionClass.equals("Over Ripe"))
@@ -575,8 +590,11 @@ public class MainActivity extends AppCompatActivity {
 //                                outputTxt.setText("Probability: "+confidence +"\nSweet level: Sweet & most likely bitter \nThis mango is OVER RIPE \nTips:\nOverripe mangoes are unsafe to eat if they have a sour or fermented smell, " +
 //                                        "visible mold, dark spots, slimy texture, or an off-taste, as these indicate spoilage and potential harmful bacteria.");
 //                                outputTxt.setVisibility(View.VISIBLE);
-                                outputMessage = "Probability: "+confidence +"\n5. Very Sweet\nSweet level: Sweet & most likely bitter \nThis mango is OVER RIPE \nTips:\nOverripe mangoes are unsafe to eat if they have a sour or fermented smell, " +
-                                        "visible mold, dark spots, slimy texture, or an off-taste, as these indicate spoilage and potential harmful bacteria. \n\nThis mango is low quality";
+                                outputMessage = "Sweet level: \uD83E\uDD6D\uD83E\uDD6D\uD83E\uDD6D\uD83E\uDD6D\uD83E\uDD6D\n5 (Very Sweet) - Sweet & most likely bitter. \n\nThis mango is" +
+                                        " OVER RIPE \n\nTips for Overripe Mango:\nOverripe mangoes are unsafe to eat if they have a sour or fermented smell, " +
+                                        "visible mold, dark spots, slimy texture, or an off-taste, as these indicate spoilage and potential harmful bacteria. \n\nWARNING⚠\uFE0F\n\n" +
+                                        "This mango is most likely of low quality or unsafe to eat, especially if it has mold, black spots, or a sour, fermented smell. Consuming such " +
+                                        "mangoes may pose health risks, so it's best to discard them.";
 
                             }
                             else if(predictionClass.equals("Over Ripe"))
@@ -584,8 +602,12 @@ public class MainActivity extends AppCompatActivity {
 //                                outputTxt.setText("Probability: "+confidence +"\nSweet level: Very sweet, almost syrupy with an intense mango flavor \nTips:\nUse these in recipes like jams, chutneys, or smoothies where their mushy texture " +
 //                                        "and intense sweetness can be an advantage. However, if they have a fermented smell or mold, discard them as they are no longer safe to eat.");
 //                                outputTxt.setVisibility(View.VISIBLE);
-                                outputMessage = "Probability: "+confidence +"\n6Sweet level: Very sweet, almost syrupy with an intense mango flavor \nTips:\nUse these in recipes like jams, chutneys, or smoothies where their mushy texture " +
-                                        "and intense sweetness can be an advantage. However, if they have a fermented smell or mold, discard them as they are no longer safe to eat.";
+                                outputMessage = "Sweet level: \uD83E\uDD6D\uD83E\uDD6D\uD83E\uDD6D\uD83E\uDD6D\uD83E\uDD6D\n5 (Very Sweet) - Intensely sweet and syrupy, with a rich mango" +
+                                        " flavor that envelops your taste buds, creating a velvety, indulgent tropical experience.\n\nTips/Recipe:\nUse these in recipes like jams, " +
+                                        "chutneys, or smoothies where their mushy texture " +
+                                        "and intense sweetness can be an advantage. However, if they have a fermented smell or mold, discard them as they are no longer safe to eat. " +
+                                        "\n\nNatural vs Carbide Ripening:\nNaturally ripened mangoes are sweeter, more flavorful, and have a rich, authentic taste, while artificially " +
+                                        "ripened ones often taste bland, lack depth, etc.";
 
                             }
                             else if(confidence >= 0.6)
@@ -602,7 +624,13 @@ public class MainActivity extends AppCompatActivity {
                             {
 //                                outputTxt.setText("The image provided is less likely identified as carabao mango.");
 //                                outputTxt.setVisibility(View.VISIBLE);
-                                outputMessage = "The image provided is less likely identified as carabao mango.";
+                                outputMessage = "The image provided does not closely match a Carabao Mango." +
+                                        "\n\nCarabao Mango Insights\n\n" +
+                                        "• **Taste and Texture:** This variety is known for its exceptionally sweet and juicy flesh, with a slight tang if not fully ripe. The texture is smooth " +
+                                        "and fiberless compared to other mango types.\n\n" +
+                                        "• **Natural vs. Artificial Ripening:** Naturally ripened Carabao mangoes develop a deep, uniform yellow color and emit a fruity scent. Mangoes ripened " +
+                                        "with chemicals like carbide may have an artificial taste and lack the natural sweetness.\n\n their shelf life without affecting their taste.\n\n" +
+                                        "If you believe this is a Carabao Mango, try capturing the image under better lighting or from a different angle for better accuracy.";
 
                             }
 
@@ -625,7 +653,8 @@ public class MainActivity extends AppCompatActivity {
                         Toast.makeText(MainActivity.this, "Error parsing response", Toast.LENGTH_LONG).show();
                     }
                 } else {
-                    Toast.makeText(MainActivity.this, "Failed to get a response", Toast.LENGTH_LONG).show();
+                    Toast.makeText(MainActivity.this, "Failed to get a response \n\nTips: Make sure the camera is focused on the mango, use some light to avoid shadows and dark " +
+                            "spots area.", Toast.LENGTH_LONG).show();
                 }
             }
 
